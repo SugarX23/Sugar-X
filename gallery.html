@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugar X - Events</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <style>
+        /* Modern Variables */
+        :root {
+            --primary-color: #007bff; /* A calming blue */
+            --secondary-color: #6c757d;
+            --background-light: #f8f9fa;
+            --background-dark: #343a40;
+            --text-light: #f8f9fa;
+            --text-dark: #212529;
+            --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        body {
+            font-family: 'Cairo', 'Roboto', sans-serif;
+            line-height: 1.7;
+        }
+
+        .navbar {
+            background-color: #fff !important;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .navbar-brand img {
+            max-height: 50px; /* Adjust as needed */
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--text-dark) !important;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: var(--primary-color) !important;
+        }
+        
+        .lang-switcher {
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .lang-switcher:hover {
+            color: #0056b3;
+        }
+
+        .content-section {
+            padding: 100px 0;
+        }
+
+        .event-card {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: var(--shadow-lg);
+            padding: 30px;
+            text-align: center;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .event-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .event-card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        footer {
+            background-color: var(--background-dark);
+            color: var(--text-light);
+            padding: 40px 0;
+        }
+        
+        footer h5 {
+            color: var(--primary-color);
+        }
+
+        footer a {
+            color: var(--text-light);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            color: var(--primary-color);
+        }
+        
+        footer .social-icons a {
+            font-size: 1.5rem;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Logo" style="max-height: 60px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html" data-lang-key="home">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="education.html" data-lang-key="education">تَعْلَمْ</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="gallery.html" data-lang-key="gallery">المعرض</a></li>
+                    <li class="nav-item"><a class="nav-link" href="podcast.html" data-lang-key="podcast">بودكاست</a></li>
+                    <li class="nav-item"><a class="nav-link" href="coming-soon.html" data-lang-key="consultation">استشارات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="join.html" data-lang-key="volunteer">تطوع معنا</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about-us.html" data-lang-key="about">من نحن</a></li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-translate"></i> <span data-lang-key="language">اللغة</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item" href="#" onclick="setLanguage('ar')">العربية</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="setLanguage('en')">English</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Events Section -->
+    <main class="content-section">
+        <div class="container">
+            <h1 class="text-center mb-5" data-lang-key="eventsTitle">الفعاليات</h1>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <a href="event-details.html" class="text-decoration-none">
+                        <div class="event-card">
+                            <img src="https://i.ibb.co/PRLzpV8/492048224-1088265666654598-8713897120890896247-n.jpg" alt="Event 3">
+                            <h4 data-lang-key="event3Title"> سكر X 2024</h4>
+                            <p data-lang-key="event3Desc">بحمد الله خلصنا فعاليات سكر X 2024، حملة التوعية اللي كان هدفها نشر الوعي حول مرض السكري.</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Add more event cards as needed -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h5 data-lang-key="about">من نحن</h5>
+                <p data-lang-key="aboutFooter">في سكر X نؤمن أن الوعي هو أول خطوة لحياة أهدأ وأصح. حملتنا وُجدت لتساندك: تفهم السكري، تضبط سكرّك، وتعيش بثقة.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h5 data-lang-key="contactTitle">تواصل معنا</h5>
+                <p data-lang-key="address"><strong>العنوان:</strong> الحي الثالث، حد سُكْرة وأبو حمد، برج العرب الجديدة، الإسكندرية.</p>
+                <p><strong data-lang-key="email">البريد الإلكتروني:</strong> <a href="mailto:just.sugarx@outlook.com">just.sugarx@outlook.com</a></p>
+                <div class="social-icons mt-3">
+                    <a href="https://www.facebook.com/Diabetesfighters123" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/sugarxejust" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12 mb-4">
+                 <h5 data-lang-key="location">موقعنا</h5>
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3418.423992542525!2d29.5585353151298!3d30.86339998158747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145f5d3d9d7a7a7b%3A0x0!2zMzDCsDUxJzQ4LjIiTiAyOcKwMzMnMzEuMSJF!5e0!3m2!1sen!2seg!4v1678886400000!5m2!1sen!2seg" width="100%" height="200" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Google Map"></iframe>
+            </div>
+        </div>
+        <div class="text-center mt-3">
+            <p>&copy; 2025 Sugar-X. <span data-lang-key="rights">كل الحقوق محفوظة.</span></p>
+        </div>
+    </div>
+    </footer>
+
+    <!-- Bootstrap JS and Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    const translations = {
+        en: {
+            // Navbar
+            home: "Home",
+            education: "To learn",
+            about: "About Us",
+            gallery: "Gallery",
+            podcast: "Podcast",
+            consultation: "Counseling",
+            volunteer: "Volunteer",
+            language: "Language",
+
+            // Hero Section (index.html)
+            heroTitle: "Live Happy with Balanced Sugar",
+            heroSubtitle: "An awareness campaign to help you understand and control diabetes for a better life.",
+
+            // About Section (index.html & about-us.html)
+            aboutTitle: "About Sugar X",
+            aboutContent: "<p>At <strong>Sugar X</strong>, we believe awareness is the first step to calmer, healthier living. We’re here to help you understand diabetes, steady your numbers, and live with confidence.</p><p>An awareness initiative offering reliable medical information in plain language, daily, doable tips for food and movement, and free consultations with doctors and pharmacists.</p>",
+
+            // Footer
+            aboutFooter: "At Sugar X, we believe awareness is the first step to calmer, healthier living. We’re here to help you understand diabetes, steady your numbers, and live with confidence.",
+            contactTitle: "Contact Us",
+            address: "<strong>Address:</strong> Third District, Had Sukkra & Abu Hamad, New Borg El Arab, Alexandria.",
+            email: "<strong>Email:</strong>",
+            followUs: "Follow Us",
+            location: "Our Location",
+            rights: "All rights reserved.",
+
+            // Other pages
+            // education.html
+            educationTitle: "To learn",
+            topic5Title: "What's Right?",
+            topic5Desc: "✨ Happy Eid Fitr ✨ 🎉 Wishing you a joyful Eid full of peace and happiness 🌙✨",
+            // gallery.html
+            eventsTitle: "Events",
+            event3Title: "Sugar X 2024",
+            event3Desc: "By the grace of God, we concluded the activities of Sugar X 2024, the awareness campaign aimed at spreading awareness about diabetes.",
+            // join.html
+            volunteerTitle: "Become a Volunteer",
+            volunteerSubtitle: "Join our team and help us make a difference in the fight against diabetes.",
+            // podcast.html
+            podcastTitle: "Our Latest Podcast Episodes",
+            podcastSubtitle: "Join our esteemed professors and industry experts as they share invaluable insights, experiences, and knowledge to enhance your academic and professional journey.",
+            waitEpisodes: "Stay tuned for upcoming episodes",
+             // whattrue.html
+            whatTrueTitle: "Facts and Illusions - Sugar X",
+            whatTrueIntro: "Did you know this wrong information before? Many times we hear a lot of wrong things about our health and we don't know right from wrong, and that's why it's our role to educate you 💙 Follow the upcoming tips to maintain your health with reliable information 👌 Share the post to benefit others 💙<br>#Sugar_Balance #Your_Health_is_Important<br>#SugarX",
+            // coming-soon.html
+            comingSoonTitle: "Coming Soon",
+            comingSoonSubtitle: "This page is under construction. Please check back later.",
+            goBack: "Go Back to Home",
+            // eid-fitr-vibes.html
+            eidFitrTitle: "✨ Happy Eid Fitr ✨",
+            eidFitrP1: "🎉 Wishing you a joyful Eid full of peace and happiness 🌙✨",
+            eidFitrP2: "Amid kahk and cozy family gatherings, let's not forget our health 💙",
+            eidFitrP3: "Here are tips to enjoy Eid without derailing your healthy routine:",
+            eidFitrLi1: "🥮 Enjoy kahk mindfully—no need to deprive yourself, just keep portions in check.",
+            eidFitrLi2: "🥗 Keep meals balanced—have a piece of kahk, then go light and wholesome like fruit or yogurt.",
+            eidFitrLi3: "🚶‍♂️ Move a little—post‑meal walks help digestion and steady energy.",
+            eidFitrLi4: "💧 Hydrate well—your body needs those fluids.",
+            eidFitrLi5: "❤️ Soak up time with loved ones—memories > menus.",
+            eidFitrP4: "Be honest… team dates‑filled kahk or malban? 😋🎊",
+            // event-details.html
+            sugarXTitle: "Sugar X 2024 Event",
+            sugarXIntro: "Sugar X 2024 was a day full of awareness, energy, and smiles. In this gallery, we’ve gathered the best shots from the event to share the joy, engagement, and teamwork that made it truly special 🤍",
+        },
+        ar: {
+            // Navbar
+            home: "الرئيسية",
+            education: "تَعْلَمْ",
+            about: "من نحن",
+            gallery: "المعرض",
+            podcast: "بودكاست",
+            consultation: "استشارات",
+            volunteer: "تطوع معنا",
+            language: "اللغة",
+
+            // Hero Section (index.html)
+            heroTitle: "عيش مبسوط بسكر مظبوط",
+            heroSubtitle: "حملة توعوية لمساعدتك على فهم السكري والتحكم فيه لحياة أفضل.",
+
+            // About Section (index.html & about-us.html)
+            aboutTitle: "عن سكر X",
+            aboutContent: "<p>في <strong>سكر X</strong> نؤمن أن الوعي هو أول خطوة لحياة أهدأ وأصح. حملتنا وُجدت لتساندك: تفهم السكري، تضبط سكرّك، وتعيش بثقة.</p><p>نحن مبادرة توعوية تقدّم معلومات طبية موثوقة ومبسّطة عن السكري، نصائح يومية غذائية ورياضية قابلة للتطبيق، واستشارات مجانية مع أطباء وصيادلة مختصين.</p>",
+
+            // Footer
+            aboutFooter: "في سكر X نؤمن أن الوعي هو أول خطوة لحياة أهدأ وأصح. حملتنا وُجدت لتساندك: تفهم السكري، تضبط سكرّك، وتعيش بثقة.",
+            contactTitle: "تواصل معنا",
+            address: "<strong>العنوان:</strong> الحي الثالث، حد سُكْرة وأبو حمد، برج العرب الجديدة، الإسكندرية.",
+            email: "<strong>البريد الإلكتروني:</strong>",
+            followUs: "تابعنا",
+            location: "موقعنا",
+            rights: "كل الحقوق محفوظة.",
+            
+            // Other pages
+            // education.html
+            educationTitle: "لِتَعْلَمْ",
+            topic5Title: "ايه الصح؟",
+            topic5Desc: "✨ عيد فطر سعيد ✨ 🎉 كل سنة وانتوا طيبين، ويارب يكون عيد مليان فرحة وسعادة عليكم 🌙✨",
+            // gallery.html
+            eventsTitle: "الفعاليات",
+            event3Title: "سكر X 2024",
+            event3Desc: "بحمد الله خلصنا فعاليات سكر X 2024، حملة التوعية اللي كان هدفها نشر الوعي حول مرض السكري.",
+            // join.html
+            volunteerTitle: "كن متطوعًا",
+            volunteerSubtitle: "انضم إلى فريقنا وساعدنا في إحداث فرق في مكافحة مرض السكري.",
+            // podcast.html
+            podcastTitle: "أحدث حلقات البودكاست",
+            podcastSubtitle: "انضم إلى أساتذتنا الخبراء في الصناعة وهم يشاركون رؤى وتجارب ومعرفة لا تقدر بثمن لتعزيز رحلتك الأكاديمية والمهنية.",
+            waitEpisodes: "انتظر الحلقات القادمة",
+            // whattrue.html
+            whatTrueTitle: "الحقائق والأوهام - سكر X",
+            whatTrueIntro: "كنت تعرف المعلومات الغلط دي قبل كدة؟ أوقات كتير بنسمع كلام كتير غلط عن صحتنا ومبنكونش عارفين الصح من الغلط، وعشان كدة ده دورنا إننا نوعيك💙 تابع النصايح الجاية عشان تحافظ على صحتك بمعلومات موثوقة 👌 شير البوست عشان تفيد غيرك 💙<br>#السكر_توازن #صحتك_مهمة<br>#سكرX",
+            // coming-soon.html
+            comingSoonTitle: "قريبًا",
+            comingSoonSubtitle: "هذه الصفحة قيد الإنشاء. يرجى التحقق مرة أخرى في وقت لاحق.",
+            goBack: "العودة إلى الصفحة الرئيسية",
+            // eid-fitr-vibes.html
+            eidFitrTitle: "✨ عيد فطر سعيد ✨",
+            eidFitrP1: "🎉 كل سنة وانتوا طيبين، ويارب يكون عيد مليان فرحة وسعادة عليكم 🌙✨",
+            eidFitrP2: "في وسط العيد والكحك واللمة الحلوة، مينفعش ننسى صحتنا💙",
+            eidFitrP3: "دي شوية نصايح عشان تستمتعوا بالعيد من غير ما تبوظوا نظامكم الصحي:",
+            eidFitrLi1: "🥮 كل كحك ولكن بعقل – متحرمش نفسك بس برضه متزودهاش عشان السكر ميبوظش منك.",
+            eidFitrLi2: "🥗 خلي أكلك متوازن – يعني خد حبة كحك بس باقي الوجبات خفيفة وصحية زي الفاكهة أو الزبادي.",
+            eidFitrLi3: "🚶‍♂️ الحركة بركة – حاول تمشي شوية بعد الأكل عشان الهضم والنشاط.",
+            eidFitrLi4: "💧 اشرب ميه كتير – جسمك محتاج تعويض للسوائل.",
+            eidFitrLi5: "❤️ استمتع بالعيد مع أهلك وأصحابك – مش بس الأكل اللي بيفرحنا، اللمة والذكريات الحلوة أهم!",
+            eidFitrP4: "قولولنا بقى.. إنتوا فريق الكحك بالعجوة ولا الملبن؟ 😋🎊",
+            // event-details.html
+            sugarXTitle: "فعالية سكر X 2024",
+            sugarXIntro: "فعالية سكر X 2024 كانت تجربة مليانة وعي، طاقة، وابتسامات. جمعنا في هذا المعرض أجمل اللقطات من يوم الحملة، عشان نشارككم لحظات الفرح، التفاعل، وروح الفريق اللي خلت الحدث مميز🤍",
+        }
+    };
+
+    function setLanguage(lang) {
+        localStorage.setItem('language', lang);
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        
+        document.querySelectorAll('[data-lang-key]').forEach(element => {
+            const key = element.getAttribute('data-lang-key');
+            if (translations[lang] && translations[lang][key]) {
+                element.innerHTML = translations[lang][key];
+            }
+        });
+
+        // Special handling for the language dropdown to ensure "العربية" is always visible
+        const langDropdown = document.querySelector('#languageDropdown + .dropdown-menu');
+        if (langDropdown) {
+            const arabicOption = langDropdown.querySelector('a[onclick="setLanguage(\'ar\')"]');
+            if (arabicOption) {
+                arabicOption.textContent = 'العربية';
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const savedLang = localStorage.getItem('language') || 'ar';
+        setLanguage(savedLang);
+
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const lang = item.getAttribute('onclick').includes("'ar'") ? 'ar' : 'en';
+                setLanguage(lang);
+            });
+        });
+    });
+    </script>
+</body>
+</html>
