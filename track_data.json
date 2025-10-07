@@ -1,4 +1,3 @@
-{
   "educational": [
     {
       "title": "Enjoy Eid Without Spiking Your Sugar",
@@ -54,7 +53,7 @@
       "id": "exercise",
       "name": "Get Moving",
       "image": "https://example.com/exercise.png",
-      "repetitionHours": 24,
+      "repetitionHours": 0.017,
       "description": "Engage in at least 150 minutes of moderate exercise per week—ideally 30 minutes five days a week—and avoid more than two consecutive days without activity【82442967434132†L62-L94】. Regular physical activity improves insulin sensitivity and helps your body use glucose for energy, so aim for daily movement like walking, yoga or resistance training【595116568215279†L191-L200】."
     },
     {
