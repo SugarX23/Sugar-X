@@ -1,0 +1,30 @@
+{
+  "educational": [
+    {
+      "title": "Healthy Breakfast Choices",
+      "summary": "Learn how to pick the right breakfast to keep blood sugar balanced.",
+      "images": [
+        "https://example.com/breakfast_main.jpg",
+        "https://example.com/breakfast_gallery1.jpg",
+        "https://example.com/breakfast_gallery2.jpg"
+      ]
+    },
+    {
+      "title": "Understanding Carbohydrates",
+      "summary": "A quick visual guide to carbs, sugars, and their effect on energy.",
+      "images": [
+        "https://example.com/carbs_main.jpg",
+        "https://example.com/carbs_chart.jpg",
+        "https://example.com/carbs_foods.jpg"
+      ]
+    }
+  ],
+  "habits": [
+    {
+      "id": "water",
+      "name": "Drink Water",
+      "image": "https://example.com/water.png",
+      "repetitionHours": 2
+    }
+  ]
+}
