@@ -1,8 +1,17 @@
 {
   "educational": [
     {
+      "title": "Enjoy Eid Without Spiking Your Sugar",
+      "summary": "During Eid, moderate your consumption of traditional cookies and sweets; don’t deprive yourself but avoid overindulgence to prevent blood‑sugar spikes. Pair a small piece of kaḥk with balanced meals like fruit or yogurt, take a short walk after eating to aid digestion, drink plenty of water to replenish lost fluids, and enjoy the holiday with your loved ones【783456837579243†L20-L29】.",
+      "images": [
+        "https://example.com/eid_main.jpg",
+        "https://example.com/eid_gallery1.jpg",
+        "https://example.com/eid_gallery2.jpg"
+      ]
+    },
+    {
       "title": "Healthy Breakfast Choices",
-      "summary": "Learn how to pick the right breakfast to keep blood sugar balanced.",
+      "summary": "Start your day with a meal that’s low in added sugars and refined carbs and high in fiber, lean protein and healthy fats. Options like vegetable omelets, Greek yogurt with berries and nuts, avocado egg wraps, quinoa bowls and steel‑cut oats provide sustained energy and help keep blood sugar steady【563605860990041†L103-L110】. When planning a diabetes‑friendly breakfast, include fiber‑rich foods, lean proteins and healthy fats【563605860990041†L260-L270】 and limit processed carbs like sugary cereals, white bread, pastries and other foods that cause glucose spikes【563605860990041†L347-L365】.",
       "images": [
         "https://example.com/breakfast_main.jpg",
         "https://example.com/breakfast_gallery1.jpg",
@@ -10,8 +19,8 @@
       ]
     },
     {
-      "title": "Understanding Carbohydrates",
-      "summary": "A quick visual guide to carbs, sugars, and their effect on energy.",
+      "title": "Understanding Carbohydrates & Blood Sugar",
+      "summary": "Carbohydrates break down into sugars during digestion; simple carbs (such as glucose and fructose) are digested quickly and cause rapid spikes in blood sugar, while complex carbs contain longer sugar chains and fiber, digest more slowly and cause a gradual rise【883019761669017†L96-L138】. The glycemic index ranks foods by how quickly they raise blood sugar—low‑glycemic foods (\u226455) like whole oats cause a slower rise, whereas high‑glycemic foods like white bread and potatoes cause substantial spikes【883019761669017†L147-L152】. Choosing low‑glycemic, high‑fiber carbohydrate sources helps manage blood sugar and lowers the risk of type 2 diabetes and heart disease【883019761669017†L147-L169】.",
       "images": [
         "https://example.com/carbs_main.jpg",
         "https://example.com/carbs_chart.jpg",
@@ -21,10 +30,39 @@
   ],
   "habits": [
     {
-      "id": "water",
+      "id": "drink_water",
       "name": "Drink Water",
       "image": "https://example.com/water.png",
-      "repetitionHours": 2
+      "repetitionHours": 2,
+      "description": "Aim to drink 9–13 cups of water per day unless your healthcare provider advises otherwise【78196318419291†L139-L142】. Staying hydrated helps regulate blood sugar and supports kidney function; dehydration can make blood sugar levels rise【78196318419291†L90-L110】."
+    },
+    {
+      "id": "check_blood_sugar",
+      "name": "Monitor Blood Glucose",
+      "image": "https://example.com/blood_glucose.png",
+      "repetitionHours": 24,
+      "description": "Check your blood sugar regularly. People with type 1 diabetes often test 4–10 times per day—before meals and snacks, before and after exercise and at bedtime【890634840560058†L329-L339】. Those taking insulin for type 2 diabetes are usually advised to test before meals and at bedtime【890634840560058†L345-L349】."
+    },
+    {
+      "id": "eat_regular_meals",
+      "name": "Eat Regular Meals",
+      "image": "https://example.com/eat.png",
+      "repetitionHours": 6,
+      "description": "Eat at consistent times and allow two to three hours between meals so that your blood glucose can return to a healthy level before you eat again【702073501896829†L447-L449】. If you’re hungry between meals, choose snacks that combine protein, healthy fats and fiber, such as fruit with nuts or hummus with vegetables【702073501896829†L470-L478】."
+    },
+    {
+      "id": "exercise",
+      "name": "Get Moving",
+      "image": "https://example.com/exercise.png",
+      "repetitionHours": 24,
+      "description": "Engage in at least 150 minutes of moderate exercise per week—ideally 30 minutes five days a week—and avoid more than two consecutive days without activity【82442967434132†L62-L94】. Regular physical activity improves insulin sensitivity and helps your body use glucose for energy, so aim for daily movement like walking, yoga or resistance training【595116568215279†L191-L200】."
+    },
+    {
+      "id": "sleep",
+      "name": "Sleep Well",
+      "image": "https://example.com/sleep.png",
+      "repetitionHours": 24,
+      "description": "Aim for at least seven hours of sleep each night. Insufficient sleep increases insulin resistance and makes it harder to manage blood sugar【9260636987080†L51-L56】. Establish consistent sleep and wake times, limit screen exposure before bed and create a calming environment to improve sleep quality【9260636987080†L95-L113】."
     }
   ]
 }
