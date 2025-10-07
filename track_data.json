@@ -1,8 +1,8 @@
 {
   "educational": [
     {
-      "title": "Enjoy Eid Without Spiking Your Sugar",
-      "summary": "During Eid, moderate your consumption of traditional cookies and sweets; don’t deprive yourself but avoid overindulgence to prevent blood‑sugar spikes. Pair a small piece of kaḥk with balanced meals like fruit or yogurt, take a short walk after eating to aid digestion, drink plenty of water to replenish lost fluids, and enjoy the holiday with your loved ones【783456837579243†L20-L29】.",
+      "title": "استمتع بالعيد من غير ما السكر يعلى",
+      "summary": "في العيد، حاول توازن بين إنك تستمتع بالكحك والبسكويت وبين إنك ما تفرطش فيهم عشان ما يحصلش ارتفاع مفاجئ في السكر. خُد قطعة صغيرة من الكحك مع أكل متوازن زي فاكهة أو زبادي، وتمشى شوية بعد الأكل عشان الهضم، واشرب ميه كتير تعوض السوائل اللي جسمك فقدها، واستمتع بالعيد مع أهلك وحبايبك.",
       "images": [
         "https://images.pexels.com/photos/5865658/pexels-photo-5865658.jpeg",
         "https://images.pexels.com/photos/416528/pexels-photo-416528.jpeg",
@@ -10,8 +10,8 @@
       ]
     },
     {
-      "title": "Healthy Breakfast Choices",
-      "summary": "Start your day with a meal that’s low in added sugars and refined carbs and high in fiber, lean protein and healthy fats. Options like vegetable omelets, Greek yogurt with berries and nuts, avocado egg wraps, quinoa bowls and steel‑cut oats provide sustained energy and help keep blood sugar steady【563605860990041†L103-L110】. When planning a diabetes‑friendly breakfast, include fiber‑rich foods, lean proteins and healthy fats【563605860990041†L260-L270】 and limit processed carbs like sugary cereals, white bread, pastries and other foods that cause glucose spikes【563605860990041†L347-L365】.",
+      "title": "اختيارات فطار صحي",
+      "summary": "ابدأ يومك بفطار قليل في السكريات المضافة والكربوهيدرات المكررة، وغني بالألياف والبروتين والدهون الصحية. اختيارات زي الأومليت بالخضار، الزبادي اليوناني مع توت ومكسرات، ساندويتش بيض بالأفوكادو، أو شوفان خشن هيدّوك طاقة ثابتة ويساعدوا في توازن السكر في الدم. خلي فطارك يحتوي على ألياف وبروتين ودهون مفيدة، وقلل الأكل اللي فيه كربوهيدرات معالجة زي الكورن فليكس الأبيض والعيش الأبيض والحلويات اللي بترفع السكر بسرعة.",
       "images": [
         "https://images.pexels.com/photos/16119655/pexels-photo-16119655.jpeg",
         "https://images.pexels.com/photos/27850094/pexels-photo-27850094.jpeg",
@@ -19,8 +19,8 @@
       ]
     },
     {
-      "title": "Understanding Carbohydrates & Blood Sugar",
-      "summary": "Carbohydrates break down into sugars during digestion; simple carbs (such as glucose and fructose) are digested quickly and cause rapid spikes in blood sugar, while complex carbs contain longer sugar chains and fiber, digest more slowly and cause a gradual rise【883019761669017†L96-L138】. The glycemic index ranks foods by how quickly they raise blood sugar—low‑glycemic foods (\u226455) like whole oats cause a slower rise, whereas high‑glycemic foods like white bread and potatoes cause substantial spikes【883019761669017†L147-L152】. Choosing low‑glycemic, high‑fiber carbohydrate sources helps manage blood sugar and lowers the risk of type 2 diabetes and heart disease【883019761669017†L147-L169】.",
+      "title": "فهم الكربوهيدرات ومستوى السكر",
+      "summary": "الكربوهيدرات بتتحول لسكر أثناء الهضم؛ الكربوهيدرات البسيطة زي الجلوكوز والفركتوز بتتهضم بسرعة وبتسبب ارتفاع مفاجئ في السكر، أما الكربوهيدرات المعقدة اللي فيها ألياف بتتهضم ببطء وبتخلي الارتفاع تدريجي. المؤشر الجلايسيمي بيقس سرعة ارتفاع السكر بعد الأكل – الأكل اللي مؤشره منخفض زي الشوفان الكامل بيرفع السكر ببطء، أما الأكل العالي زي العيش الأبيض والبطاطس بيرفعه بسرعة. لما تختار أكل غني بالألياف ومنخفض في المؤشر الجلايسيمي، بتساعد في تنظيم السكر وتقليل خطر السكر النوع التاني وأمراض القلب.",
       "images": [
         "https://upload.wikimedia.org/wikipedia/commons/7/79/Vegan_Nine_Grain_Whole_Wheat_Bread.jpg",
         "https://upload.wikimedia.org/wikipedia/commons/4/4d/Suckale08_fig3_glucose_insulin_day.png",
@@ -31,38 +31,38 @@
   "habits": [
     {
       "id": "drink_water",
-      "name": "Drink Water",
+      "name": "اشرب ميه",
       "image": "https://images.pexels.com/photos/416528/pexels-photo-416528.jpeg",
       "repetitionHours": 2,
-      "description": "Aim to drink 9–13 cups of water per day unless your healthcare provider advises otherwise【78196318419291†L139-L142】. Staying hydrated helps regulate blood sugar and supports kidney function; dehydration can make blood sugar levels rise【78196318419291†L90-L110】."
+      "description": "حاول تشرب من 9 لـ 13 كوباية ميه في اليوم إلا لو دكتورك قال غير كده. الترطيب الكويس بيساعد على تنظيم السكر ويدعم وظيفة الكلى، والجفاف ممكن يخلي مستوى السكر يعلى."
     },
     {
       "id": "check_blood_sugar",
-      "name": "Monitor Blood Glucose",
+      "name": "تابع مستوى السكر",
       "image": "https://upload.wikimedia.org/wikipedia/commons/4/44/Glucometer01.JPG",
       "repetitionHours": 4,
-      "description": "Check your blood sugar regularly. People with type 1 diabetes often test 4–10 times per day—before meals and snacks, before and after exercise and at bedtime【890634840560058†L329-L339】. Those taking insulin for type 2 diabetes are usually advised to test before meals and at bedtime【890634840560058†L345-L349】."
+      "description": "افحص مستوى السكر بانتظام. الناس اللي عندها سكر من النوع الأول بتقيس من 4 لـ 10 مرات في اليوم – قبل الأكل والوجبات الخفيفة، قبل وبعد التمرين، وقبل النوم. اللي بياخدوا إنسولين من النوع التاني بيقيسوا غالبًا قبل الأكل وقبل النوم."
     },
     {
       "id": "eat_regular_meals",
-      "name": "Eat Regular Meals",
+      "name": "كُل في مواعيد منتظمة",
       "image": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg",
       "repetitionHours": 0.03,
-      "description": "Eat at consistent times and allow two to three hours between meals so that your blood glucose can return to a healthy level before you eat again【702073501896829†L447-L449】. If you’re hungry between meals, choose snacks that combine protein, healthy fats and fiber, such as fruit with nuts or hummus with vegetables【702073501896829†L470-L478】."
+      "description": "كُل في أوقات ثابتة وسيب من ساعتين لتلاتة بين الوجبات عشان مستوى السكر يرجع طبيعي قبل ما تاكل تاني. لو جوعت بين الوجبات، اختار سناكس فيها بروتين ودهون مفيدة وألياف زي فاكهة مع مكسرات أو خضار مع حمص."
     },
     {
       "id": "exercise",
-      "name": "Get Moving",
+      "name": "اتحرّك",
       "image": "https://images.pexels.com/photos/19682337/pexels-photo-19682337.jpeg",
       "repetitionHours": 24,
-      "description": "Engage in at least 150 minutes of moderate exercise per week—ideally 30 minutes five days a week—and avoid more than two consecutive days without activity【82442967434132†L62-L94】. Regular physical activity improves insulin sensitivity and helps your body use glucose for energy, so aim for daily movement like walking, yoga or resistance training【595116568215279†L191-L200】."
+      "description": "مارس رياضة على الأقل 150 دقيقة في الأسبوع – يعني حوالي نص ساعة 5 أيام في الأسبوع، وما تسيبش يومين ورا بعض من غير حركة. النشاط البدني المنتظم بيحسّن حساسية الجسم للإنسولين وبيساعده يستخدم الجلوكوز كطاقة، فحاول تتحرك كل يوم حتى لو بالمشي أو اليوجا أو تمارين المقاومة."
     },
     {
       "id": "sleep",
-      "name": "Sleep Well",
+      "name": "نام كويس",
       "image": "https://images.pexels.com/photos/545016/pexels-photo-545016.jpeg",
       "repetitionHours": 24,
-      "description": "Aim for at least seven hours of sleep each night. Insufficient sleep increases insulin resistance and makes it harder to manage blood sugar【9260636987080†L51-L56】. Establish consistent sleep and wake times, limit screen exposure before bed and create a calming environment to improve sleep quality【9260636987080†L95-L113】."
+      "description": "حاول تنام على الأقل 7 ساعات كل ليلة. قلة النوم بتزود مقاومة الإنسولين وبتصعّب التحكم في السكر. خليك ثابت في مواعيد النوم والصحيان، قلل استخدام الموبايل قبل النوم، واعمل جو هادي يساعدك تنام كويس."
     }
   ]
 }
