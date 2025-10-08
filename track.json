@@ -1,6 +1,6 @@
 {
   "latestVersion": "1.2.0",
-  "forced": false,
+  "forced": true,
   "changelog": "Bug fixes, smoother performance, and new themes!",
   "updateUrl": "https://sugarx23.github.io/Sugar-X/"
 }
