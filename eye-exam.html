@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugar X - Eye Exam</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <style>
+        /* Modern Variables */
+        :root {
+            --primary-color: #007bff; /* A calming blue */
+            --secondary-color: #6c757d;
+            --background-light: #f8f9fa;
+            --background-dark: #343a40;
+            --text-light: #f8f9fa;
+            --text-dark: #212529;
+            --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        body {
+            font-family: 'Cairo', 'Roboto', sans-serif;
+            line-height: 1.7;
+        }
+
+        .navbar {
+            background-color: #fff !important;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .navbar-brand img {
+            max-height: 50px; /* Adjust as needed */
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--text-dark) !important;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: var(--primary-color) !important;
+        }
+        
+        .lang-switcher {
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .lang-switcher:hover {
+            color: #0056b3;
+        }
+
+        .content-section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+        }
+
+        .education-content-box {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: var(--shadow-lg);
+            padding: 30px;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        footer {
+            background-color: var(--background-dark);
+            color: var(--text-light);
+            padding: 40px 0;
+        }
+        
+        footer h5 {
+            color: var(--primary-color);
+        }
+
+        footer a {
+            color: var(--text-light);
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            color: var(--primary-color);
+        }
+        
+        footer .social-icons a {
+            font-size: 1.5rem;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Logo" style="max-height: 60px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html" data-lang-key="home">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="education.html" data-lang-key="education">تَعْلَمْ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html" data-lang-key="gallery">المعرض</a></li>
+                    <li class="nav-item"><a class="nav-link" href="podcast.html" data-lang-key="podcast">بودكاست</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about-us.html" data-lang-key="about">من نحن</a></li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-translate"></i> <span data-lang-key="language">اللغة</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                            <li><a class="dropdown-item" href="#" onclick="setLanguage('ar')">العربية</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="setLanguage('en')">English</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content-section">
+        <div class="container">
+            <div class="education-content-box">
+                <div class="text-center">
+                    <img src="https://images.pexels.com/photos/5752266/pexels-photo-5752266.jpeg" alt="لماذا يجب إجراء فحوص عيون منتظمة؟" class="img-fluid mb-3" style="max-width: 50%; height: auto;">
+                </div>
+                <h2 class="text-center section-title" data-lang-key="topic2Title">لماذا يجب إجراء فحوص عيون منتظمة؟</h2>
+                <div class="text-center lead" data-lang-key="topic2Desc">
+                    <p>احجز فحصًا شاملاً بتوسيع بؤبؤ العين مرة واحدة على الأقل كل عام (للمصابين بالنوع الثاني عند التشخيص، وللنمط الأول خلال خمس سنوات من البداية). إذا كان هناك اعتلال شبكية أو أثناء الحمل، اتبع جدول طبيب العيون الأكثر تكرارًا.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5 data-lang-key="about">من نحن</h5>
+                    <p data-lang-key="aboutFooter">في سكر X نؤمن أن الوعي هو أول خطوة لحياة أهدأ وأصح. حملتنا وُجدت لتساندك: تفهم السكري، تضبط سكرّك، وتعيش بثقة.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5 data-lang-key="contactTitle">تواصل معنا</h5>
+                    <p data-lang-key="address"><strong>العنوان:</strong> الحي الثالث، حد سُكْرة وأبو حمد، برج العرب الجديدة، الإسكندرية.</p>
+                    <p><strong data-lang-key="email">البريد الإلكتروني:</strong> <a href="mailto:just.sugarx@outlook.com">just.sugarx@outlook.com</a></p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5 data-lang-key="followUs">تابعنا</h5>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/Diabetesfighters123" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/sugarxejust" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p>&copy; 2025 Sugar-X. <span data-lang-key="rights">كل الحقوق محفوظة.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    const translations = {
+        en: {
+            // Navbar
+            home: "Home",
+            education: "To learn",
+            about: "About Us",
+            gallery: "Gallery",
+            podcast: "Podcast",
+            consultation: "Counseling",
+            volunteer: "Volunteer",
+            language: "Language",
+
+            // Content
+            topic2Title: "Why should you have regular eye exams?",
+            topic2Desc: "<p>Dilated eye exam. Book a comprehensive dilated eye exam at least once a year (for those with type 2 at diagnosis, and for type 1 within five years of onset). If there is retinopathy or during pregnancy, follow your ophthalmologist's more frequent schedule.</p>",
+
+            // Footer
+            aboutFooter: "At Sugar X, we believe awareness is the first step to calmer, healthier living. We’re here to help you understand diabetes, steady your numbers, and live with confidence.",
+            contactTitle: "Contact Us",
+            address: "<strong>Address:</strong> Third District, Had Sukkra & Abu Hamad, New Borg El Arab, Alexandria.",
+            email: "<strong>Email:</strong>",
+            followUs: "Follow Us",
+            location: "Our Location",
+            rights: "All rights reserved.",
+        },
+        ar: {
+            // Navbar
+            home: "الرئيسية",
+            education: "تَعْلَمْ",
+            about: "من نحن",
+            gallery: "المعرض",
+            podcast: "بودكاست",
+            consultation: "استشارات",
+            volunteer: "تطوع معنا",
+            language: "اللغة",
+
+            //Content
+            topic2Title: "لماذا يجب إجراء فحوص عيون منتظمة؟",
+            topic2Desc: "<p>احجز فحصًا شاملاً بتوسيع بؤبؤ العين مرة واحدة على الأقل كل عام (للمصابين بالنوع الثاني عند التشخيص، وللنمط الأول خلال خمس سنوات من البداية). إذا كان هناك اعتلال شبكية أو أثناء الحمل، اتبع جدول طبيب العيون الأكثر تكرارًا.</p>",
+
+            // Footer
+            aboutFooter: "في سكر X نؤمن أن الوعي هو أول خطوة لحياة أهدأ وأصح. حملتنا وُجدت لتساندك: تفهم السكري، تضبط سكرّك، وتعيش بثقة.",
+            contactTitle: "تواصل معنا",
+            address: "<strong>العنوان:</strong> الحي الثالث، حد سُكْرة وأبو حمد، برج العرب الجديدة، الإسكندرية.",
+            email: "<strong>البريد الإلكتروني:</strong>",
+            followUs: "تابعنا",
+            location: "موقعنا",
+            rights: "كل الحقوق محفوظة.",
+        }
+    };
+
+    function setLanguage(lang) {
+        localStorage.setItem('language', lang);
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        
+        document.querySelectorAll('[data-lang-key]').forEach(element => {
+            const key = element.getAttribute('data-lang-key');
+            if (translations[lang] && translations[lang][key]) {
+                element.innerHTML = translations[lang][key];
+            }
+        });
+
+        // Special handling for the language dropdown to ensure "العربية" is always visible
+        const langDropdown = document.querySelector('#languageDropdown + .dropdown-menu');
+        if (langDropdown) {
+            const arabicOption = langDropdown.querySelector('a[onclick="setLanguage(\'ar\')"]');
+            if (arabicOption) {
+                arabicOption.textContent = 'العربية';
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const savedLang = localStorage.getItem('language') || 'ar';
+        setLanguage(savedLang);
+
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const lang = item.getAttribute('onclick').includes("'ar'") ? 'ar' : 'en';
+                setLanguage(lang);
+            });
+        });
+    });
+    </script>
+</body>
+</html>
