@@ -55,7 +55,7 @@
       "id": "kidney_labs",
       "name": "تحاليل الكلى (UACR + eGFR)",
       "image": "https://www.diaverum.sa/globalassets/kidney-care/chronic-kidney-disease/stages-of-ckd/kidney.jpg",
-      "repetitionHours": 8760,
+      "repetitionHours": 0.001,
       "description": "أجرِ فحص نسبة الألبومين إلى الكرياتينين في البول وفحص الكرياتينين في الدم/ eGFR مرة واحدة على الأقل سنويًا؛ زد تكرار الاختبارات إذا ظهرت الألبومينية أو انخفاض eGFR حسب خطة الطبيب."
     }
   ]
