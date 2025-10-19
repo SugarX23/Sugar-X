@@ -1,0 +1,21 @@
+[
+  {
+    "id": "edu_intro",
+    "title": "مرحبًا بك",
+    "summary": "ابدأ بتنظيم عاداتك",
+    "content": "هذا هو المحتوى الكامل للمادة التعليمية الأولى. تعلم كيف يمكنك تحسين صحتك.",
+    "images": [
+      "https://example.com/images/welcome_1.png",
+      "https://example.com/images/welcome_2.png"
+    ]
+  },
+  {
+    "id": "edu_diet",
+    "title": "أهمية النظام الغذائي",
+    "summary": "تعرف على الأكل الصحي",
+    "content": "النظام الغذائي المتوازن هو مفتاح الصحة الجيدة. تناول الفواكه والخضروات يوميًا.",
+    "images": [
+      "https://example.com/images/diet.png"
+    ]
+  }
+]

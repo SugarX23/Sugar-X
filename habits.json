@@ -1,0 +1,18 @@
+[
+  {
+    "id": "habit_water",
+    "name": "شرب الماء",
+    "description": "٨ أكواب يوميًا",
+    "repetitionHours": 24,
+    "image": "https://example.com/images/water.png",
+    "checked": true
+  },
+  {
+    "id": "habit_walk",
+    "name": "المشي",
+    "description": "٣٠ دقيقة يوميًا",
+    "repetitionHours": 24,
+    "image": "https://example.com/images/walking.png",
+    "checked": false
+  }
+]
