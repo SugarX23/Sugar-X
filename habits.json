@@ -1,18 +1,35 @@
 [
   {
-    "id": "habit_water",
-    "name": "شرب الماء",
-    "description": "٨ أكواب يوميًا",
-    "repetitionHours": 24,
+    "id": "habit_drink_water",
+    "name": "Drink Water",
+    "description": "Drink at least 8 glasses of water a day.",
+    "repetition": {
+      "value": 1,
+      "unit": "days"
+    },
     "image": "https://example.com/images/water.png",
-    "checked": true
+    "checked": false
   },
   {
-    "id": "habit_walk",
-    "name": "المشي",
-    "description": "٣٠ دقيقة يوميًا",
-    "repetitionHours": 24,
-    "image": "https://example.com/images/walking.png",
+    "id": "habit_exercise",
+    "name": "Exercise",
+    "description": "Exercise for at least 30 minutes.",
+    "repetition": {
+      "value": 1,
+      "unit": "days"
+    },
+    "image": "https://example.com/images/exercise.png",
+    "checked": false
+  },
+  {
+    "id": "habit_read_book",
+    "name": "Read a Book",
+    "description": "Read at least 10 pages of a book.",
+    "repetition": {
+      "value": 1,
+      "unit": "days"
+    },
+    "image": "https://example.com/images/book.png",
     "checked": false
   }
 ]

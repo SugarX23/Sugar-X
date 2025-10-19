@@ -1,21 +1,39 @@
 [
   {
-    "id": "edu_intro",
-    "title": "مرحبًا بك",
-    "summary": "ابدأ بتنظيم عاداتك",
-    "content": "هذا هو المحتوى الكامل للمادة التعليمية الأولى. تعلم كيف يمكنك تحسين صحتك.",
-    "images": [
-      "https://example.com/images/welcome_1.png",
-      "https://example.com/images/welcome_2.png"
+    "id": "edu_healthy_eating",
+    "title": "Healthy Eating",
+    "summary": "Learn the basics of a healthy diet.",
+    "content": [
+      {
+        "type": "title",
+        "value": "The Importance of a Balanced Diet"
+      },
+      {
+        "type": "image_paragraph",
+        "paragraph": "A balanced diet is essential for good health and well-being. It provides your body with the nutrients it needs to function correctly. Without balanced nutrition, your body is more prone to disease, infection, fatigue, and low performance.",
+        "image": "https://example.com/images/healthy_eating.png"
+      },
+      {
+        "type": "title",
+        "value": "Key Components of a Healthy Diet"
+      },
+      {
+        "type": "image_paragraph",
+        "paragraph": "A healthy diet should include a variety of fruits, vegetables, whole grains, lean proteins, and healthy fats. It's also important to limit your intake of processed foods, sugary drinks, and unhealthy fats.",
+        "image": "https://example.com/images/diet_components.png"
+      }
     ]
   },
   {
-    "id": "edu_diet",
-    "title": "أهمية النظام الغذائي",
-    "summary": "تعرف على الأكل الصحي",
-    "content": "النظام الغذائي المتوازن هو مفتاح الصحة الجيدة. تناول الفواكه والخضروات يوميًا.",
-    "images": [
-      "https://example.com/images/diet.png"
+    "id": "edu_regular_exercise",
+    "title": "Regular Exercise",
+    "summary": "Discover the benefits of physical activity.",
+    "content": [
+      {
+        "type": "image_paragraph",
+        "paragraph": "Regular exercise is one of the most important things you can do for your health. It can help you control your weight, reduce your risk of chronic diseases, strengthen your bones and muscles, and improve your mental health and mood.",
+        "image": "https://example.com/images/exercise_benefits.png"
+      }
     ]
   }
 ]
