@@ -1,77 +1,194 @@
-[
-  {
-    "id": "hb_water",
-    "name": "اشرب الماء",
-    "description": "اشرب كوب ماء كل ساعتين للحفاظ على الترطيب والطاقة.",
-    "repetitionHours": 0.001,
-    "image": "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=800&q=80",
-    "checked": true
-  },
-  {
-    "id": "hb_walk",
-    "name": "المشي اليومي",
-    "description": "أضف 20–30 دقيقة مشي لروتينك اليومي لتحسين حساسية الإنسولين.",
-    "repetitionHours": 24,
-    "image": "https://images.unsplash.com/photo-1511735111819-9a3f7709049c?w=800&q=80"
-  },
-  {
-    "id": "hb_breakfast",
-    "name": "فطور متوازن",
-    "description": "ابدأ يومك بفطور غني بالبروتين والألياف لتجنّب ارتفاعات السكر المفاجئة.",
-    "repetitionHours": 24,
-    "image": "https://images.unsplash.com/photo-1505575972945-280fd4c2b224?w=800&q=80"
-  },
-  {
-    "id": "hb_medication",
-    "name": "أخذ الدواء",
-    "description": "تذكير منتظم لتناول أدويتك حسب وصفة الطبيب.",
-    "repetitionHours": 12,
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80"
-  },
-  {
-    "id": "hb_fruit",
-    "name": "حصة فاكهة",
-    "description": "التزم بحصة واحدة من الفاكهة منخفضة المؤشر الجلايسيمي.",
-    "repetitionHours": 24,
-    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&q=80"
-  },
-  {
-    "id": "hb_sleep",
-    "name": "نوم كافٍ",
-    "description": "حاول الحصول على 7–8 ساعات نوم متواصل لتحسين ضبط السكر.",
-    "repetitionHours": 24,
-    "image": "https://images.unsplash.com/photo-1528819622765-d6bcf132f793?w=800&q=80"
-  },
-  {
-    "id": "hb_steps",
-    "name": "10 دقائق حركة بعد الوجبة",
-    "description": "مشي خفيف بعد الأكل يساعد في خفض الارتفاع بعد الوجبة.",
-    "repetitionHours": 8,
-    "image": "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=800&q=80"
-  },
-  {
-    "id": "hb_log",
-    "name": "تسجيل السكر",
-    "description": "سجّل قراءة السكر صباحًا أو قبل النوم لمتابعة الاتجاه.",
-    "repetitionHours": 24,
-    "image": "https://images.unsplash.com/photo-1556228724-4a9be5f2c063?w=800&q=80"
-  },
-  {
-    "id": "hb_water2",
-    "name": "كوب ماء دافئ صباحًا",
-    "description": "ابدأ اليوم بكوب ماء دافئ؛ عادة بسيطة مفيدة للهضم.",
-    "repetitionHours": 24,
-    "image": "https://images.unsplash.com/photo-1497534446932-c925b458314e?w=800&q=80"
-  },
-  {
-    "id": "hb_labcheck",
-    "name": "صورة تحليل شهري",
-    "description": "التقط صورة لنتائج التحاليل وخزّنها في صفحة التحليل.",
-    "repetitionHours": 720,
-    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80",
-    "category": "Lab Test",              // ✅ this activates the button in TrackerPage
-    "allowAttachments": true,            // ✅ also activates (extra safety)
-    "isLabReport": true                  // ✅ also activates (extra safety)
-  }
+{
+  "habits": [
+    {
+      "id": "lab_hba1c",
+      "category": "Lab Test",
+      "allowAttachments": true,
+      "isLabReport": true,
+      "name": "تحليل السكر التراكمي (HbA1c)",
+      "description": "يقيس متوسط مستوى السكر خلال آخر 3 أشهر لمتابعة السيطرة على السكري. التكرار القياسي كل 3 أشهر، لكنه قد يختلف حسب حالة المريض أو حسب توجيه الطبيب.",
+      "repetitionHours": 2160,
+      "image": "https://via.placeholder.com/300x300.png?text=HbA1c",
+      "checked": false
+    },
+    {
+      "id": "lab_fbg",
+      "category": "Lab Test",
+      "allowAttachments": true,
+      "isLabReport": true,
+      "name": "تحليل سكر الدم الصائم (Fasting Blood Glucose)",
+      "description": "قياس مستوى السكر بعد صيام 8 ساعات لتقييم الاستقرار. يحدد تكراره حسب حالة المريض أو حسب توجيه الطبيب (قد يكون شهريًا أو عند اللزوم).",
+      "repetitionHours": 2160,
+      "image": "https://via.placeholder.com/300x300.png?text=Fasting",
+      "checked": false
+    },
+    {
+      "id": "lab_ppbs",
+      "category": "Lab Test",
+      "allowAttachments": true,
+      "isLabReport": true,
+      "name": "سكر بعد الأكل بساعتين (Postprandial)",
+      "description": "قياس السكر بعد وجبة بساعتين لمعرفة الاستجابة للإنسولين. التكرار يُحدد حسب الحالة أو تعليمات الطبيب.",
+      "repetitionHours": 2160,
+      "image": "https://via.placeholder.com/300x300.png?text=PPBS",
+      "checked": false
+    },
+    {
+      "id": "lab_kidney",
+      "category": "Lab Test",
+      "allowAttachments": true,
+      "isLabReport": true,
+      "name": "تحليل وظائف الكلى",
+      "description": "Creatinine, BUN, eGFR — لقياس كفاءة الكلى. عادة كل 6–12 شهرًا، وقد يختلف حسب حالة المريض أو حسب توجيه الطبيب.",
+      "repetitionHours": 8760,
+      "image": "https://via.placeholder.com/300x300.png?text=Kidney",
+      "checked": false
+    },
+    {
+      "id": "lab_uacr",
+      "category": "Lab Test",
+      "allowAttachments": true,
+      "isLabReport": true,
+      "name": "الزلال في البول (UACR)",
+      "description": "فحص مبكر لتلف الكلى المرتبط بالسكري. غالبًا كل 6–12 شهرًا، ويختلف حسب الحالة أو تعليمات الطبيب.",
+      "repetitionHours": 8760,
+      "image": "https://via.placeholder.com/300x300.png?text=UACR",
+      "checked": false
+    },
+    {
+      "id": "lab_lipids",
+      "category": "Lab Test",
+      "allowAttachments": true,
+      "isLabReport": true,
+      "name": "تحليل الدهون (Lipid Profile)",
+      "description": "قياس الكوليسترول والدهون الثلاثية لتقييم خطر القلب. عادة كل 6–12 شهرًا، وقد يطلب الطبيب تكرارًا مختلفًا حسب الحالة.",
+      "repetitionHours": 8760,
+      "image": "https://via.placeholder.com/300x300.png?text=Lipids",
+      "checked": false
+    },
+    {
+      "id": "lab_lft",
+      "category": "Lab Test",
+      "allowAttachments": true,
+      "isLabReport": true,
+      "name": "وظائف الكبد (LFTs)",
+      "description": "متابعة وظائف الكبد خاصةً مع بعض الأدوية. التكرار حسب حالة المريض أو توجيه الطبيب.",
+      "repetitionHours": 8760,
+      "image": "https://via.placeholder.com/300x300.png?text=LFTs",
+      "checked": false
+    },
+    {
+      "id": "lab_cbc",
+      "category": "Lab Test",
+      "allowAttachments": true,
+      "isLabReport": true,
+      "name": "صورة الدم الكاملة (CBC)",
+      "description": "متابعة الصحة العامة والكشف عن الأنيميا أو العدوى. التكرار يُحدد حسب الحالة السريرية أو حسب توجيه الطبيب.",
+      "repetitionHours": 8760,
+      "image": "https://via.placeholder.com/300x300.png?text=CBC",
+      "checked": false
+    },
+    {
+      "id": "lab_vitamins",
+      "category": "Lab Test",
+      "allowAttachments": true,
+      "isLabReport": true,
+      "name": "الفيتامينات والمعادن",
+      "description": "Vitamin D, B12, Electrolytes — تقييم النقص أو تأثير الأدوية. يُجرى عند الاشتباه أو وفق خطة الطبيب وحالة المريض.",
+      "repetitionHours": 8760,
+      "image": "https://via.placeholder.com/300x300.png?text=Vitamins",
+      "checked": false
+    },
 
-]
+    {
+      "id": "habit_meal_schedule",
+      "category": "Habit",
+      "name": "تنظيم مواعيد الوجبات",
+      "description": "الالتزام بأوقات ثابتة يوميًا لاستقرار مستوى السكر.",
+      "repetitionHours": 24,
+      "image": "https://via.placeholder.com/300x300.png?text=Meals",
+      "checked": false
+    },
+    {
+      "id": "habit_home_glucose",
+      "category": "Habit",
+      "name": "متابعة مستوى السكر في المنزل",
+      "description": "قياس السكر يوميًا حسب الخطة العلاجية (1–4 مرات). تكرار القياس يتحدد حسب حالة المريض أو حسب توجيه الطبيب.",
+      "repetitionHours": 480,
+      "image": "https://via.placeholder.com/300x300.png?text=Glucometer",
+      "checked": false
+    },
+    {
+      "id": "habit_activity",
+      "category": "Habit",
+      "name": "نشاط بدني منتظم",
+      "description": "30 دقيقة نشاط معتدل لتحسين الحساسية للإنسولين.",
+      "repetitionHours": 24,
+      "image": "https://via.placeholder.com/300x300.png?text=Activity",
+      "checked": false
+    },
+    {
+      "id": "habit_water",
+      "category": "Habit",
+      "name": "شرب ماء كفاية",
+      "description": "نحو لترين خلال اليوم — حافظ على الترطيب.",
+      "repetitionHours": 360,
+      "image": "https://via.placeholder.com/300x300.png?text=Water",
+      "checked": false
+    },
+    {
+      "id": "habit_footcare",
+      "category": "Habit",
+      "name": "الاهتمام بالقدمين",
+      "description": "فحص القدمين يوميًا لاكتشاف أي جروح أو تغيّرات مبكرًا.",
+      "repetitionHours": 24,
+      "image": "https://via.placeholder.com/300x300.png?text=Foot+Care",
+      "checked": false
+    },
+    {
+      "id": "habit_followup",
+      "category": "Habit",
+      "name": "المتابعة الطبية المنتظمة",
+      "description": "زيارة الطبيب دوريًا لمراجعة العلاج. المدة بين الزيارات يحددها الطبيب حسب حالة المريض.",
+      "repetitionHours": 2160,
+      "image": "https://via.placeholder.com/300x300.png?text=Follow-up",
+      "checked": false
+    },
+    {
+      "id": "habit_sleep",
+      "category": "Habit",
+      "name": "نوم منتظم",
+      "description": "7–8 ساعات ليلًا لدعم توازن الهرمونات والطاقة.",
+      "repetitionHours": 24,
+      "image": "https://via.placeholder.com/300x300.png?text=Sleep",
+      "checked": false
+    },
+    {
+      "id": "habit_no_smoking",
+      "category": "Habit",
+      "name": "تجنب التدخين",
+      "description": "الإقلاع يقلل مخاطر القلب والكلى والعين.",
+      "repetitionHours": 24,
+      "image": "https://via.placeholder.com/300x300.png?text=No+Smoking",
+      "checked": false
+    },
+    {
+      "id": "habit_balanced_diet",
+      "category": "Habit",
+      "name": "اختيار طعام متوازن",
+      "description": "كربوهيدرات معتدلة مع خضروات وألياف وبروتين صحي.",
+      "repetitionHours": 24,
+      "image": "https://via.placeholder.com/300x300.png?text=Balanced+Diet",
+      "checked": false
+    },
+    {
+      "id": "habit_stress",
+      "category": "Habit",
+      "name": "إدارة التوتر",
+      "description": "تمارين استرخاء بسيطة يوميًا لتقليل الارتفاعات المفاجئة.",
+      "repetitionHours": 24,
+      "image": "https://via.placeholder.com/300x300.png?text=Stress",
+      "checked": false
+    }
+  ]
+}
