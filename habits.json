@@ -1,35 +1,74 @@
 [
   {
-    "id": "habit_drink_water",
-    "name": "Drink Water",
-    "description": "Drink at least 8 glasses of water a day.",
-    "repetition": {
-      "value": 1,
-      "unit": "days"
-    },
-    "image": "https://example.com/images/water.png",
-    "checked": false
+    "id": "hb_water",
+    "name": "اشرب الماء",
+    "description": "اشرب كوب ماء كل ساعتين للحفاظ على الترطيب والطاقة.",
+    "repetitionHours": 0.001,
+    "image": "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=800&q=80",
+    "checked": true
   },
   {
-    "id": "habit_exercise",
-    "name": "Exercise",
-    "description": "Exercise for at least 30 minutes.",
-    "repetition": {
-      "value": 1,
-      "unit": "days"
-    },
-    "image": "https://example.com/images/exercise.png",
-    "checked": false
+    "id": "hb_walk",
+    "name": "المشي اليومي",
+    "description": "أضف 20–30 دقيقة مشي لروتينك اليومي لتحسين حساسية الإنسولين.",
+    "repetitionHours": 24,
+    "image": "https://images.unsplash.com/photo-1511735111819-9a3f7709049c?w=800&q=80"
   },
   {
-    "id": "habit_read_book",
-    "name": "Read a Book",
-    "description": "Read at least 10 pages of a book.",
-    "repetition": {
-      "value": 1,
-      "unit": "days"
-    },
-    "image": "https://example.com/images/book.png",
+    "id": "hb_breakfast",
+    "name": "فطور متوازن",
+    "description": "ابدأ يومك بفطور غني بالبروتين والألياف لتجنّب ارتفاعات السكر المفاجئة.",
+    "repetitionHours": 24,
+    "image": "https://images.unsplash.com/photo-1505575972945-280fd4c2b224?w=800&q=80"
+  },
+  {
+    "id": "hb_medication",
+    "name": "أخذ الدواء",
+    "description": "تذكير منتظم لتناول أدويتك حسب وصفة الطبيب.",
+    "repetitionHours": 12,
+    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80"
+  },
+  {
+    "id": "hb_fruit",
+    "name": "حصة فاكهة",
+    "description": "التزم بحصة واحدة من الفاكهة منخفضة المؤشر الجلايسيمي.",
+    "repetitionHours": 24,
+    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&q=80"
+  },
+  {
+    "id": "hb_sleep",
+    "name": "نوم كافٍ",
+    "description": "حاول الحصول على 7–8 ساعات نوم متواصل لتحسين ضبط السكر.",
+    "repetitionHours": 24,
+    "image": "https://images.unsplash.com/photo-1528819622765-d6bcf132f793?w=800&q=80"
+  },
+  {
+    "id": "hb_steps",
+    "name": "10 دقائق حركة بعد الوجبة",
+    "description": "مشي خفيف بعد الأكل يساعد في خفض الارتفاع بعد الوجبة.",
+    "repetitionHours": 8,
+    "image": "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=800&q=80"
+  },
+  {
+    "id": "hb_log",
+    "name": "تسجيل السكر",
+    "description": "سجّل قراءة السكر صباحًا أو قبل النوم لمتابعة الاتجاه.",
+    "repetitionHours": 24,
+    "image": "https://images.unsplash.com/photo-1556228724-4a9be5f2c063?w=800&q=80"
+  },
+  {
+    "id": "hb_water2",
+    "name": "كوب ماء دافئ صباحًا",
+    "description": "ابدأ اليوم بكوب ماء دافئ؛ عادة بسيطة مفيدة للهضم.",
+    "repetitionHours": 24,
+    "image": "https://images.unsplash.com/photo-1497534446932-c925b458314e?w=800&q=80"
+  },
+  {
+    "id": "hb_labcheck",
+    "name": "صورة تحليل شهري",
+    "description": "التقط صورة لنتائج التحاليل وخزّنها في صفحة التحليل.",
+    "repetitionHours": 720,
+    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80",
     "checked": false
   }
 ]
