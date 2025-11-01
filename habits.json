@@ -7,7 +7,7 @@
       "isLabReport": true,
       "name": "تحليل السكر التراكمي (HbA1c)",
       "description": "يقيس متوسط مستوى السكر خلال آخر 3 أشهر لمتابعة السيطرة على السكري. التكرار القياسي كل 3 أشهر، لكنه قد يختلف حسب حالة المريض أو حسب توجيه الطبيب.",
-      "repetitionHours": 2160,
+      "repetitionHours": 0.01,
       "image": "https://via.placeholder.com/300x300.png?text=HbA1c",
       "checked": false
     },
