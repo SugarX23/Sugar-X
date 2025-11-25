@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sugar X - Terms of Use</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Terms of Use for Sugar X wellness application." />
+
+  <style>
+    :root {
+      --bg-color: #f7f7fa;
+      --card-bg: #ffffff;
+      --primary-text: #222222;
+      --secondary-text: #555555;
+      --accent: #3f51b5;
+      --accent-soft: #e8eaf6;
+      --border-color: #e0e0e0;
+      --danger: #c62828;
+      --muted: #9e9e9e;
+      --radius-lg: 12px;
+      --radius-md: 8px;
+      --shadow-soft: 0 10px 25px rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      background: radial-gradient(circle at top, #f0f4ff 0, #f7f7fa 40%, #f7f7fa 100%);
+      color: var(--primary-text);
+      line-height: 1.6;
+    }
+
+    .page-wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 32px 16px 48px;
+    }
+
+    @media (min-width: 768px) {
+      .page-wrapper {
+        padding: 48px 24px 64px;
+      }
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 20px;
+      box-shadow: var(--shadow-soft);
+      padding: 28px 22px 32px;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+    }
+
+    @media (min-width: 768px) {
+      .card {
+        padding: 36px 32px 40px;
+      }
+    }
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 18px;
+    }
+
+    .app-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-radius: 999px;
+      padding: 6px 14px;
+      width: fit-content;
+    }
+
+    .app-badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    h1 {
+      font-size: 26px;
+      margin: 6px 0 0;
+      letter-spacing: 0.02em;
+    }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 30px;
+      }
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: var(--secondary-text);
+      margin-top: 6px;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .meta-label {
+      font-weight: 600;
+      color: var(--secondary-text);
+    }
+
+    .notice-box {
+      margin: 20px 0 24px;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      border: 1px solid #ffe0b2;
+      background: #fff8e1;
+      font-size: 13px;
+      color: #6d4c41;
+    }
+
+    .notice-box strong {
+      display: block;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+    }
+
+    .toc {
+      margin: 20px 0 28px;
+      padding: 16px 16px 18px;
+      border-radius: var(--radius-md);
+      background: #fafafa;
+      border: 1px solid var(--border-color);
+    }
+
+    .toc-title {
+      margin: 0 0 10px;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--secondary-text);
+    }
+
+    .toc ol {
+      margin: 0;
+      padding-left: 20px;
+      font-size: 14px;
+    }
+
+    .toc li {
+      margin-bottom: 4px;
+    }
+
+    .toc a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .toc a:hover {
+      text-decoration: underline;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-top: 26px;
+      margin-bottom: 8px;
+      border-left: 4px solid var(--accent);
+      padding-left: 10px;
+    }
+
+    p {
+      margin: 6px 0 8px;
+      font-size: 14px;
+      color: var(--secondary-text);
+    }
+
+    ul {
+      margin: 6px 0 10px 20px;
+      padding-left: 16px;
+      font-size: 14px;
+      color: var(--secondary-text);
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    .highlight-danger {
+      border-radius: var(--radius-md);
+      border: 1px solid #ffcdd2;
+      background: #ffebee;
+      padding: 12px 14px;
+      margin: 12px 0;
+      font-size: 13px;
+      color: var(--danger);
+    }
+
+    .section-meta {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .footer-note {
+      margin-top: 28px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-color);
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .caps {
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .text-small {
+      font-size: 13px;
+    }
+
+    .acceptance-emphasis {
+      margin-top: 10px;
+      padding: 12px 14px;
+      border-radius: var(--radius-md);
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 13px;
+    }
+
+    code {
+      font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono",
+        "Courier New", monospace;
+      font-size: 12px;
+      background: #f1f1f1;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <main class="card" role="main">
+      <header class="header">
+        <div class="app-badge">
+          <span class="app-badge-dot"></span>
+          Sugar X – Wellness Application
+        </div>
+        <h1>Terms of Use</h1>
+        <div class="subtitle">
+          Please read these Terms of Use carefully before using the Sugar X application.
+        </div>
+        <div class="meta">
+          <span>
+            <span class="meta-label">Last Updated:</span>
+            20 November 2025
+          </span>
+          <span>
+            <span class="meta-label">Jurisdiction:</span>
+            Arab Republic of Egypt
+          </span>
+        </div>
+      </header>
+
+      <section class="notice-box" aria-label="Important notice">
+        <strong>Important Notice</strong>
+        By downloading, installing, accessing, or using the Sugar X application (“App”),
+        you agree to be bound by these Terms of Use (“Terms”). If you do not agree with
+        any part of these Terms, you must not use the App.
+      </section>
+
+      <!-- Table of Contents -->
+      <nav class="toc" aria-label="Table of contents">
+        <h2 class="toc-title">Contents</h2>
+        <ol>
+          <li><a href="#section-1">1. Purpose of the App</a></li>
+          <li><a href="#section-2">2. Not Medical Advice</a></li>
+          <li><a href="#section-3">3. No Guarantee of Accuracy or Reliability</a></li>
+          <li><a href="#section-4">4. User Responsibilities</a></li>
+          <li><a href="#section-5">5. Limitation of Liability</a></li>
+          <li><a href="#section-6">6. Updates and Modifications</a></li>
+          <li><a href="#section-7">7. User Conduct</a></li>
+          <li><a href="#section-8">8. Termination</a></li>
+          <li><a href="#section-9">9. Governing Law</a></li>
+          <li><a href="#section-10">10. Acceptance of Terms</a></li>
+        </ol>
+      </nav>
+
+      <!-- Section 1 -->
+      <section id="section-1">
+        <div class="section-meta caps">Section 1</div>
+        <h2>Purpose of the App</h2>
+        <p>
+          The Sugar X mobile application (“<strong>App</strong>”) is intended solely for
+          general wellness and lifestyle support. The App may provide features that
+          include, but are not limited to:
+        </p>
+        <ul>
+          <li>Step counting and activity-related metrics;</li>
+          <li>Habit tracking and progress monitoring;</li>
+          <li>Medication reminder alarms and related notifications;</li>
+          <li>General educational information regarding health and wellness topics.</li>
+        </ul>
+        <p>
+          The App is <strong>not</strong> designed, certified, or marketed as a medical
+          device, nor is it intended to provide medical advice, diagnosis, or treatment
+          for any disease, condition, or health issue.
+        </p>
+      </section>
+
+      <!-- Section 2 -->
+      <section id="section-2">
+        <div class="section-meta caps">Section 2</div>
+        <h2>Not Medical Advice</h2>
+        <p>
+          All content and functionality made available through the App, including but
+          not limited to reminders, notifications, tips, articles, educational content,
+          and instructional text, are provided for
+          <strong>general informational and wellness purposes only</strong>.
+        </p>
+        <p>
+          The App is <strong>not a substitute</strong> for any of the following:
+        </p>
+        <ul>
+          <li>Professional medical advice;</li>
+          <li>Medical diagnosis or evaluation;</li>
+          <li>Professional healthcare judgment;</li>
+          <li>Doctor-prescribed treatments or medication plans;</li>
+          <li>Emergency medical services or urgent care.</li>
+        </ul>
+        <p>
+          You must always consult a qualified physician, pharmacist, or other licensed
+          healthcare provider with any questions regarding a medical condition, your
+          medication regimen, or any health-related decision. Never disregard, avoid,
+          or delay obtaining medical advice from a professional because of information
+          obtained through the App.
+        </p>
+        <div class="highlight-danger">
+          <strong>Emergency Situations:</strong>
+          The App must <strong>not</strong> be used in emergencies. In the event of a
+          medical emergency, call your local emergency number immediately (for example,
+          <code>123</code> in Egypt) or seek urgent care from the nearest medical facility.
+        </div>
+      </section>
+
+      <!-- Section 3 -->
+      <section id="section-3">
+        <div class="section-meta caps">Section 3</div>
+        <h2>No Guarantee of Accuracy or Reliability</h2>
+        <p>
+          While reasonable efforts may be made to provide a stable and beneficial user
+          experience, the App is provided on an “as is” and “as available” basis. To the
+          fullest extent permitted by law, no guarantee, representation, or warranty is
+          made that:
+        </p>
+        <ul>
+          <li>Reminders, alarms, or notifications will always trigger on time or at all;</li>
+          <li>Step counts, habit tracking data, or other activity metrics will be accurate or complete;</li>
+          <li>All educational content will be current, complete, error-free, or suitable for your specific situation;</li>
+          <li>The App will be available without interruptions, bugs, delays, or technical malfunctions.</li>
+        </ul>
+        <p>
+          The performance and reliability of the App may be affected by factors outside
+          our control, including but not limited to:
+        </p>
+        <ul>
+          <li>Your device model and settings;</li>
+          <li>Operating system behavior or restrictions;</li>
+          <li>Battery optimization or power-saving modes;</li>
+          <li>Network connectivity or data restrictions;</li>
+          <li>Third-party services and updates.</li>
+        </ul>
+        <p>
+          You acknowledge and agree that you remain solely responsible for managing your
+          own medication schedule, health routines, and personal decisions, regardless
+          of any features offered by the App.
+        </p>
+      </section>
+
+      <!-- Section 4 -->
+      <section id="section-4">
+        <div class="section-meta caps">Section 4</div>
+        <h2>User Responsibilities</h2>
+        <p>
+          By accessing or using the App, you acknowledge and agree that:
+        </p>
+        <ul>
+          <li>
+            You are solely responsible for any actions you take, or fail to take, based
+            on information or features provided by the App;
+          </li>
+          <li>
+            You will <strong>not</strong> treat the App as a medical device or as a guaranteed,
+            fail-safe reminder system for medication or any other critical activity;
+          </li>
+          <li>
+            You will consult a qualified healthcare professional for any medical concerns,
+            diagnoses, treatment decisions, or questions related to medication;
+          </li>
+          <li>
+            You understand that the App is provided as a convenience and general wellness tool only,
+            and that reliance on the App is at your own risk.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Section 5 -->
+      <section id="section-5">
+        <div class="section-meta caps">Section 5</div>
+        <h2>Limitation of Liability</h2>
+        <p>
+          To the maximum extent permitted by applicable law, the creators, developers,
+          owners, and distributors of the App, and their respective officers, employees,
+          agents, and affiliates (collectively, the “<strong>Released Parties</strong>”),
+          shall <strong>not</strong> be liable for any direct or indirect damages arising
+          out of or in connection with your use of, or inability to use, the App.
+        </p>
+        <p>Without limiting the generality of the foregoing, the Released Parties shall not be liable for:</p>
+        <ul>
+          <li>Missed medication doses or incorrect medication timing;</li>
+          <li>Any health consequences, deterioration, or personal injury;</li>
+          <li>Losses or damages arising from reliance on App features or content;</li>
+          <li>Errors, delays, or failures in reminder notifications, alarms, or alerts;</li>
+          <li>Any inaccuracies, omissions, or errors in educational or informational content;</li>
+          <li>
+            Any indirect, incidental, special, exemplary, or consequential damages, including but not
+            limited to loss of data, loss of profits, or business interruption.
+          </li>
+        </ul>
+        <p>
+          Your sole and exclusive remedy for dissatisfaction with the App, or any part of it,
+          is to stop using the App.
+        </p>
+      </section>
+
+      <!-- Section 6 -->
+      <section id="section-6">
+        <div class="section-meta caps">Section 6</div>
+        <h2>Updates and Modifications</h2>
+        <p>
+          We reserve the right, at our sole discretion, to update, modify, or discontinue
+          the App or any part of its content, features, or functionality at any time,
+          with or without notice.
+        </p>
+        <p>
+          We may also revise these Terms from time to time. When changes are made, the
+          “Last Updated” date at the top of these Terms will be modified accordingly.
+        </p>
+        <p>
+          Your continued use of the App after any changes to the App or to these Terms
+          constitutes your acceptance of the revised Terms. If you do not agree to the
+          updated Terms, you must discontinue use of the App.
+        </p>
+      </section>
+
+      <!-- Section 7 -->
+      <section id="section-7">
+        <div class="section-meta caps">Section 7</div>
+        <h2>User Conduct</h2>
+        <p>
+          You agree that you will not use the App for any unlawful, harmful, abusive,
+          or unauthorized purpose. Without limitation, you agree that you will not:
+        </p>
+        <ul>
+          <li>Use the App in violation of any applicable law or regulation;</li>
+          <li>Attempt to gain unauthorized access to the App or any related systems;</li>
+          <li>Interfere with or disrupt the operation, security, or integrity of the App;</li>
+          <li>Reverse engineer, decompile, or otherwise attempt to extract the source code of the App, except to the extent expressly permitted by law;</li>
+          <li>Use the App in any manner that could damage, disable, overburden, or impair the App or the experience of other users.</li>
+        </ul>
+      </section>
+
+      <!-- Section 8 -->
+      <section id="section-8">
+        <div class="section-meta caps">Section 8</div>
+        <h2>Termination</h2>
+        <p>
+          We may, at our sole discretion, suspend, restrict, or terminate your access to
+          the App at any time, with or without notice, and for any reason or no reason,
+          including but not limited to:
+        </p>
+        <ul>
+          <li>Violation of these Terms;</li>
+          <li>Suspected misuse, abuse, or unlawful activity;</li>
+          <li>Technical, security, or operational reasons.</li>
+        </ul>
+        <p>
+          Upon termination, all rights granted to you under these Terms will immediately
+          cease, and you must stop using the App and, where applicable, uninstall it
+          from your device.
+        </p>
+      </section>
+
+      <!-- Section 9 -->
+      <section id="section-9">
+        <div class="section-meta caps">Section 9</div>
+        <h2>Governing Law</h2>
+        <p>
+          These Terms, and any dispute or claim arising out of or in connection with them
+          or their subject matter or formation (including non-contractual disputes or
+          claims), shall be governed by and construed in accordance with the laws of the
+          <strong>Arab Republic of Egypt</strong>, without regard to its conflict-of-law
+          principles.
+        </p>
+        <p>
+          You agree to submit to the exclusive jurisdiction of the competent courts of
+          the Arab Republic of Egypt in respect of any dispute arising from or in
+          connection with these Terms or your use of the App.
+        </p>
+      </section>
+
+      <!-- Section 10 -->
+      <section id="section-10">
+        <div class="section-meta caps">Section 10</div>
+        <h2>Acceptance of Terms</h2>
+        <p>
+          By downloading, installing, accessing, or using the App, you expressly confirm
+          that:
+        </p>
+        <ul>
+          <li>You have read and understood these Terms in full;</li>
+          <li>You accept and agree to be legally bound by these Terms;</li>
+          <li>You assume full responsibility for your use of the App and for any decisions
+              made or actions taken based on the App’s features or content;</li>
+          <li>You agree to comply with these Terms at all times while using the App.</li>
+        </ul>
+
+        <div class="acceptance-emphasis">
+          Continued use of the Sugar X application constitutes your ongoing acceptance
+          of these Terms of Use, including any future updates or modifications.
+        </div>
+      </section>
+
+      <footer class="footer-note">
+        This Terms of Use page is intended to be provided within or alongside the Sugar X
+        application. For any questions regarding these Terms, please contact the App
+        developer or owner through the official support channels associated with the
+        application.
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
