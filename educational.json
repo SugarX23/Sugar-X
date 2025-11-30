@@ -3,9 +3,11 @@
     {
       "id": "edu_periodic_checkups",
       "title": "الفحوصات الدورية لمرضى السكري (Habits: Periodic Check-ups)",
-      "summary": "دليل موجز للفحوصات الدورية: السكر التراكمي HbA1c، سكر الدم الصائم FBG، والزلال في البول UACR مع وظائف الكلى (eGFR). متى تُجرى ولماذا.",
+      "summary": "دليل موجز للفحوصات الدورية لمرضى السكري: السكر التراكمي HbA1c، سكر الدم الصائم FBG، والزلال في البول UACR مع وظائف الكلى (eGFR). متى تُجرى ولماذا.",
       "images": [
-        "https://i.ibb.co/pjmTnhww/image.png"
+        "https://i.ibb.co/PvkLFMR2/Screenshot-2025-11-19-215320.png",
+        "https://i.ibb.co/67MWnb7Y/Screenshot-2025-11-19-214937.png",
+        "https://i.ibb.co/chhN6T1Q/Screenshot-2025-11-19-214918.png"
       ],
       "content": [
         { "type": "header", "value": "تحليل السكر التراكمي (HbA1c / A1C)" },
@@ -29,7 +31,10 @@
             "يُجرى كل 3 أشهر إذا كانت هناك تغييرات في الخطة العلاجية أو كان مستوى السكر غير مستقر."
           ]
         },
-        { "type": "image", "value": "https://via.placeholder.com/1000x600.png?text=A1C%2F+HbA1c" },
+        {
+          "type": "image",
+          "value": "https://i.ibb.co/PvkLFMR2/Screenshot-2025-11-19-215320.png"
+        },
 
         { "type": "header", "value": "سكر الدم الصائم (Fasting Blood Glucose)" },
         {
@@ -74,7 +79,9 @@
       "title": "أنواع مرض السكري والفروق بينها",
       "summary": "عرض مبسّط لأنواع السكري: النوع الأول، النوع الثاني، وسكري الحمل؛ الآليات والعلاج والسمات المميزة.",
       "images": [
-        "https://via.placeholder.com/1200x675.png?text=Types+of+Diabetes"
+        "https://i.ibb.co/7qBknkv/Screenshot-2025-11-19-215111.png",
+        "https://i.ibb.co/1fqnhDwn/Screenshot-2025-11-19-214900.png",
+        "https://i.ibb.co/hFJcT1Bz/Screenshot-2025-11-19-215253.png"
       ],
       "content": [
         { "type": "header", "value": "النوع الأول من السكري (Type 1 Diabetes)" },
@@ -82,7 +89,10 @@
           "type": "paragraph",
           "value": "مرض مناعي ذاتي يهاجم فيه جهاز المناعة خلايا البنكرياس المنتِجة للأنسولين، فيتوقف البنكرياس عن إنتاج الأنسولين أو ينتجه بكميات قليلة جدًا. غالبًا يُشخَّص عند الأطفال واليافعين، ويستلزم علاجًا بالأنسولين طيلة الحياة (حقن)."
         },
-     { "type": "image", "value": "https://i.ibb.co/ZRSccNhx/image.png" },
+        {
+          "type": "image",
+          "value": "https://i.ibb.co/ZRSccNhx/image.png"
+        },
 
         { "type": "header", "value": "النوع الثاني من السكري (Type 2 Diabetes)" },
         {
@@ -116,10 +126,15 @@
       "title": "أجهزة قياس سكر الدم والفروق بينها",
       "summary": "مقارنة بين جهاز القياس التقليدي (وخز الإصبع) وأنظمة المراقبة المستمرة CGM، مع أمثلة شائعة في السوق المصري.",
       "images": [
-        "https://via.placeholder.com/1200x675.png?text=Glucose+Monitoring"
+        "https://i.ibb.co/7qBknkv/Screenshot-2025-11-19-215111.png",
+        "https://i.ibb.co/k2GFbntv/Screenshot-2025-11-19-214849.png",
+        "https://i.ibb.co/1fqnhDwn/Screenshot-2025-11-19-214900.png"
       ],
       "content": [
-        { "type": "header", "value": "جهاز قياس سكر الدم التقليدي (Standard Blood Glucose Meter)" },
+        {
+          "type": "header",
+          "value": "جهاز قياس سكر الدم التقليدي (Standard Blood Glucose Meter)"
+        },
         {
           "type": "paragraph",
           "value": "يتكون عادةً من: الجهاز، وقلم الوخز، وإبر الوخز، وشرائط القياس. تُسحب قطرة دم من طرف الإصبع وتوضع على الشريط المُدخل في الجهاز لتظهر القراءة خلال ثوانٍ."
@@ -128,8 +143,15 @@
           "type": "paragraph",
           "value": "أمثلة شائعة في السوق المصري: Accu-Chek (Instant/Guide/Active)، OneTouch (Select Plus)، Contour (TS/Plus One)."
         },
+        {
+          "type": "image",
+          "value": "https://i.ibb.co/k2GFbntv/Screenshot-2025-11-19-214849.png"
+        },
 
-        { "type": "header", "value": "المراقبة المستمرة للسكر (CGM: Continuous Glucose Monitoring)" },
+        {
+          "type": "header",
+          "value": "المراقبة المستمرة للسكر (CGM: Continuous Glucose Monitoring)"
+        },
         {
           "type": "paragraph",
           "value": "يُثبَّت حساس صغير تحت الجلد (غالبًا في الذراع الخلفية) لقياس الجلوكوز في السائل الخلالي بشكل مستمر. تُقرأ القيم عبر مسح ضوئي متقطع أو بث لاسلكي إلى جهاز استقبال/هاتف ذكي."
@@ -137,6 +159,10 @@
         {
           "type": "paragraph",
           "value": "من الأمثلة: FreeStyle Libre (نظام Flash) حيث تُستخرج القراءة عبر المسح."
+        },
+        {
+          "type": "image",
+          "value": "https://i.ibb.co/1fqnhDwn/Screenshot-2025-11-19-214900.png"
         },
         {
           "type": "bullets",
@@ -154,7 +180,7 @@
       "title": "فروق بين محاقن الأنسولين (Insulin Syringes)",
       "summary": "تفاصيل أحجام وأطوال وإبر محاقن الأنسولين وتأثيرها على الراحة والدقة.",
       "images": [
-        "https://via.placeholder.com/1200x675.png?text=Insulin+Syringes"
+        "https://i.ibb.co/kgZZYrCd/Screenshot-2025-11-19-215019.png"
       ],
       "content": [
         {
@@ -194,7 +220,7 @@
       "title": "قلم الأنسولين (Insulin Pen)",
       "summary": "وصف قلم الأنسولين وآلية عمله وخصائصه العملية مقارنة بالحقن التقليدية.",
       "images": [
-        "https://via.placeholder.com/1200x675.png?text=Insulin+Pen"
+        "https://i.ibb.co/PvkLFMR2/Screenshot-2025-11-19-215320.png"
       ],
       "content": [
         {
