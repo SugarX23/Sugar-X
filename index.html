@@ -111,26 +111,22 @@
     }
     .card-news:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); }
     
-    /* CRITICAL: Uniform aspect ratio for all media 
-       Aspect Ratio 4/5 (0.8) is typical for Instagram Portrait 
-    */
+    /* Uniform aspect ratio for all media */
     .news-media-container {
         width: 100%;
-        aspect-ratio: 4 / 5; /* Forces all containers to be tall rectangles */
+        aspect-ratio: 4 / 5; 
         position: relative;
         overflow: hidden;
-        background-color: #000; /* dark background for loading */
+        background-color: #000;
     }
 
-    /* For the static image (Marathon) */
     .news-media-container img.news-image {
         width: 100%;
         height: 100%;
-        object-fit: cover; /* This expands the image to fill the tall space (crops sides) */
+        object-fit: cover; 
         object-position: center;
     }
 
-    /* For the iframes (Instagram) */
     .news-media-container iframe {
         width: 100%;
         height: 100%;
@@ -277,10 +273,16 @@
 
         <div class="row g-4 mt-1">
           
+          <!-- UPDATED: Marathon card now embeds Instagram reel DRW9qTZjD-y -->
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
             <article class="card-news">
               <div class="news-media-container">
-                 <img class="news-image" src="https://i.ibb.co/MyGcqNRK/79c0d77e-9f22-4e7f-8c7a-0daa976cd43d.png" alt="run to blue Marathon" />
+                <iframe 
+                  src="https://www.instagram.com/reel/DRW9qTZjD-y/embed" 
+                  scrolling="no" 
+                  allowtransparency="true" 
+                  allowfullscreen="true">
+                </iframe>
               </div>
               <div class="news-content">
                 <div class="news-meta">
@@ -288,7 +290,10 @@
                   <span data-lang-key="newsCategory">ماراثون</span>
                 </div>
                 <h3 class="h5 fw-bold" data-lang-key="runToBlueTitle">run to blue — Marathon</h3>
-                <p class="mt-2 mb-0 small text-muted" data-lang-key="runToBlueDesc">إطلاق مبادرة جري توعوية لدعم التوازن الصحي وإدارة السكري.</p>
+                <p class="mt-2 mb-0 small text-muted" data-lang-key="runToBlueDesc">
+                  تعالوا معانا في الماراثون! 💙🏃‍♂️✨
+                  سكر X حوّلنا التوعية لحركة حقيقية — طاقة، حركة وفايبز ما بتقفش. يلا نجري، نلهم، ونخلي صوت التوعية بالسكري أعلى من أي وقت! 🎗️🔥 وبالتعاون مع @glowrunners_ حوّلنا التوعية لجري ما يتنسيش.
+                </p>
               </div>
             </article>
           </div>
@@ -363,8 +368,8 @@
   <script>
     // Initialize Animations
     AOS.init({
-        once: true, // Animation happens only once
-        offset: 100, // Offset (in px) from the original trigger point
+        once: true,
+        offset: 100,
     });
 
     const translations = {
@@ -386,7 +391,7 @@
             aboutTitle: "About Sugar X",
             aboutContent: "<p>At <strong>Sugar X</strong>, we believe awareness is the first step to calmer, healthier living. We’re here to help you understand diabetes, steady your numbers, and live with confidence.</p>",
 
-            // Apps Section (NEW)
+            // Apps Section
             appsTitle: "Sugar X App",
             appTitle: "Sugar X App",
             appDesc: "Your smart companion for diabetes management. Track meals, get daily tips, and control your health easily.",
@@ -404,10 +409,10 @@
             newsTitle: "Latest News",
             newsCategory: "Marathon",
             
-            // News Item 1
+            // News Item 1 (UPDATED CAPTION)
             dateNov14: "November 21",
             runToBlueTitle: "run to blue — Marathon",
-            runToBlueDesc: "Launching a running awareness initiative to support health balance and diabetes management.",
+            runToBlueDesc: "Come with us to our marathon! 💙🏃‍♂️✨<br>SugarX is turning awareness into action — energy, movement, and unstoppable vibes. Let’s run, inspire, and make diabetes awareness louder than ever! 🎗️🔥 In a collab with @glowrunners_, we turned awareness into an unforgettable run.",
 
             // News Item 2
             datePharos: "November 28",
@@ -447,7 +452,7 @@
             aboutTitle: "عن سكر X",
             aboutContent: "<p>في <strong>سكر X</strong> نؤمن أن الوعي هو أول خطوة لحياة أهدأ وأصح. حملتنا وُجدت لتساندك: تفهم السكري، تضبط سكرّك، وتعيش بثقة.</p>",
 
-            // Apps Section (NEW)
+            // Apps Section
             appsTitle: "تطبيق سكر X",
             appTitle: "تطبيق Sugar X",
             appDesc: "رفيقك الذكي لإدارة السكري. تتبع وجباتك، واحصل على نصائح يومية، وتحكم في صحتك بسهولة.",
@@ -465,10 +470,10 @@
             newsTitle: "أحدث الأخبار",
             newsCategory: "ماراثون",
             
-            // News Item 1
+            // News Item 1 (تحديث الكابشن)
             dateNov14: "21 نوفمبر",
             runToBlueTitle: "run to blue — Marathon",
-            runToBlueDesc: "إطلاق مبادرة جري توعوية لدعم التوازن الصحي وإدارة السكري.",
+            runToBlueDesc: "تعالوا معانا في الماراثون! 💙🏃‍♂️✨<br>سكر X حوّلنا التوعية لحركة حقيقية — طاقة، حركة وفايبز ما بتقفش. يلا نجري، نلهم، ونخلي صوت التوعية بالسكري أعلى من أي وقت! 🎗️🔥 وبالتعاون مع @glowrunners_ حوّلنا التوعية لجري ما يتنسيش.",
 
             // News Item 2
             datePharos: "28 نوفمبر",
