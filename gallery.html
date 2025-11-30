@@ -3,151 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sugar X - Events</title>
+    <title>Sugar X - Gallery</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Modern Variables */
         :root {
             --primary-color: #007bff;
-            --secondary-color: #6c757d;
-            --background-light: #f8f9fa;
-            --background-dark: #343a40;
-            --text-light: #f8f9fa;
             --text-dark: #212529;
-            --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --text-light: #f8f9fa;
         }
+        body { font-family: 'Cairo', 'Roboto', sans-serif; background-color: #f8f9fa; }
+        
+        /* Navbar */
+        .navbar { background-color: #fff !important; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        .nav-link { color: var(--text-dark) !important; font-weight: 600; }
+        .nav-link.active { color: var(--primary-color) !important; }
 
-        body {
-            font-family: 'Cairo', 'Roboto', sans-serif;
-            line-height: 1.7;
-            background-color: var(--background-light);
-        }
-
-        .navbar {
-            background-color: #fff !important;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        }
-
-        .navbar-brand img {
-            max-height: 50px; 
-        }
-
-        .navbar-nav .nav-link {
-            color: var(--text-dark) !important;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .navbar-nav .nav-link:hover,
-        .navbar-nav .nav-link.active {
-            color: var(--primary-color) !important;
-        }
-
-        .content-section {
-            padding: 100px 0;
-            min-height: 80vh;
-        }
-
+        /* Card Styles */
+        .content-section { padding: 100px 0; min-height: 80vh; }
         .event-card {
             background: #fff;
-            border-radius: 15px;
-            box-shadow: var(--shadow-lg);
-            padding: 25px;
-            text-align: center;
-            height: 100%;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
+            border-radius: 16px;
             overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
             display: flex;
             flex-direction: column;
-        }
-
-        .event-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-
-        .event-card-img-wrapper {
-            height: 200px;
-            overflow: hidden;
-            border-radius: 10px;
-            margin-bottom: 1.5rem;
-        }
-
-        .event-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .event-card:hover img {
-            transform: scale(1.05);
-        }
-
-        .event-card h4 {
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: var(--text-dark);
-        }
-
-        .event-card p {
-            color: var(--secondary-color);
-            font-size: 0.95rem;
-            flex-grow: 1;
-        }
-
-        .event-link {
             text-decoration: none;
             color: inherit;
-            display: block;
-            height: 100%;
         }
+        .event-card:hover { transform: translateY(-10px); box-shadow: 0 25px 30px -5px rgba(0,0,0,0.15); }
+        
+        .card-img-wrap { height: 250px; overflow: hidden; position: relative; }
+        .card-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+        .event-card:hover .card-img-wrap img { transform: scale(1.1); }
+        
+        .card-body { padding: 25px; display: flex; flex-direction: column; flex-grow: 1; }
+        .card-title { font-weight: 700; margin-bottom: 15px; color: var(--text-dark); }
+        .card-text { color: #6c757d; font-size: 0.95rem; flex-grow: 1; line-height: 1.6; }
+        .card-footer-custom { margin-top: 20px; color: var(--primary-color); font-weight: 700; display: flex; align-items: center; gap: 8px; }
 
-        footer {
-            background-color: var(--background-dark);
-            color: var(--text-light);
-            padding: 40px 0;
-        }
-        
-        footer h5 {
-            color: var(--primary-color);
-        }
-
-        footer a {
-            color: var(--text-light);
-            text-decoration: none;
-        }
-        
-        footer a:hover {
-            color: var(--primary-color);
-        }
-        
-        footer .social-icons a {
-            font-size: 1.5rem;
-            margin: 0 10px;
-        }
+        footer { background-color: #343a40; color: #fff; padding: 40px 0; margin-top: auto; }
+        footer a { color: #fff; text-decoration: none; }
     </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="images/logo.png" alt="Logo" style="max-height: 60px;">
+                <img src="images/logo.png" alt="Logo" style="max-height: 50px;">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -160,10 +74,8 @@
                 </ul>
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-translate"></i> <span data-lang-key="language">اللغة</span>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="langDrop" data-bs-toggle="dropdown"><i class="bi bi-translate"></i> <span data-lang-key="language">اللغة</span></a>
+                        <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#" onclick="setLanguage('ar')">العربية</a></li>
                             <li><a class="dropdown-item" href="#" onclick="setLanguage('en')">English</a></li>
                         </ul>
@@ -173,40 +85,55 @@
         </div>
     </nav>
 
-    <!-- Events Section -->
+    <!-- Main Content -->
     <main class="content-section">
         <div class="container">
-            <h1 class="text-center mb-5" data-lang-key="eventsTitle">الفعاليات</h1>
+            <h1 class="text-center mb-5 fw-bold" data-lang-key="eventsTitle">معرض الفعاليات</h1>
             <div class="row g-4">
                 
-                <!-- NEW EVENT: Pharos Kidzone -->
-                <div class="col-md-4">
-                    <a href="nursery.html" class="event-link">
-                        <div class="event-card">
-                            <div class="event-card-img-wrapper">
-                                <!-- Using one of the nursery images as thumbnail -->
-                                <img src="https://i.ibb.co/Pv4Z2rXb/image.png" alt="Pharos Kidzone">
-                            </div>
-                            <h4 data-lang-key="nurseryTitle">يوم في Pharos Kidzone</h4>
-                            <p data-lang-key="nurseryDesc">يوم ممتع في Pharos Kidzone! بنعلم قلوب صغيرة عن السكري من خلال الألعاب والابتسامات.</p>
-                            <div class="mt-3 text-primary">
-                                <i class="bi bi-images"></i> <span data-lang-key="viewGallery">شاهد الصور</span>
+                <!-- 1. Pharos Kidzone -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="nursery.html" class="event-card">
+                        <div class="card-img-wrap">
+                            <img src="https://i.ibb.co/ZpK6Qf4w/IMG-1436.jpg" alt="Pharos Kidzone">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title" data-lang-key="nurseryTitle">يوم في Pharos Kidzone</h4>
+                            <p class="card-text" data-lang-key="nurseryDesc">يوم ممتع في Pharos Kidzone! بنعلم قلوب صغيرة عن السكري من خلال الألعاب والابتسامات.</p>
+                            <div class="card-footer-custom">
+                                <i class="bi bi-images"></i> <span data-lang-key="viewAlbum">شاهد الألبوم</span>
                             </div>
                         </div>
                     </a>
                 </div>
 
-                <!-- Existing Event: Sugar X 2024 -->
-                <div class="col-md-4">
-                    <a href="event-details.html" class="event-link">
-                        <div class="event-card">
-                            <div class="event-card-img-wrapper">
-                                <img src="https://i.ibb.co/PRLzpV8/492048224-1088265666654598-8713897120890896247-n.jpg" alt="Sugar X 2024">
+                <!-- 2. Main Campus 2025 -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="main-campus.html" class="event-card">
+                        <div class="card-img-wrap">
+                            <img src="https://i.ibb.co/MyPLkDCP/IMG-0852.jpg" alt="Sugar X Main Campus">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title" data-lang-key="campusTitle">سكر X في الحرم الجامعي 2025</h4>
+                            <p class="card-text" data-lang-key="campusDesc">جولة التوعية الكبرى داخل الحرم الجامعي. طاقة شبابية ونشر للوعي بين الطلاب.</p>
+                            <div class="card-footer-custom">
+                                <i class="bi bi-images"></i> <span data-lang-key="viewAlbum">شاهد الألبوم</span>
                             </div>
-                            <h4 data-lang-key="event3Title"> سكر X 2024</h4>
-                            <p data-lang-key="event3Desc">بحمد الله خلصنا فعاليات سكر X 2024، حملة التوعية اللي كان هدفها نشر الوعي حول مرض السكري.</p>
-                             <div class="mt-3 text-primary">
-                                <i class="bi bi-images"></i> <span data-lang-key="viewGallery">شاهد الصور</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 3. Sugar X 2024 (Old Event) -->
+                <div class="col-lg-4 col-md-6">
+                    <a href="event-details.html" class="event-card">
+                        <div class="card-img-wrap">
+                            <img src="https://i.ibb.co/PRLzpV8/492048224-1088265666654598-8713897120890896247-n.jpg" alt="Sugar X 2024">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title" data-lang-key="event3Title">سكر X 2024</h4>
+                            <p class="card-text" data-lang-key="event3Desc">بحمد الله خلصنا فعاليات سكر X 2024، حملة التوعية اللي كان هدفها نشر الوعي حول مرض السكري.</p>
+                            <div class="card-footer-custom">
+                                <i class="bi bi-images"></i> <span data-lang-key="viewAlbum">شاهد الألبوم</span>
                             </div>
                         </div>
                     </a>
@@ -218,93 +145,33 @@
 
     <!-- Footer -->
     <footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4">
-                <h5 data-lang-key="about">من نحن</h5>
-                <p data-lang-key="aboutFooter">في سكر X نؤمن أن الوعي هو أول خطوة لحياة أهدأ وأصح. حملتنا وُجدت لتساندك: تفهم السكري، تضبط سكرّك، وتعيش بثقة.</p>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <h5 data-lang-key="contactTitle">تواصل معنا</h5>
-                <p data-lang-key="address"><strong>العنوان:</strong> الحي الثالث، حد سُكْرة وأبو حمد، برج العرب الجديدة، الإسكندرية.</p>
-                <p><strong data-lang-key="email">البريد الإلكتروني:</strong> <a href="mailto:just.sugarx@outlook.com">just.sugarx@outlook.com</a></p>
-                <div class="social-icons mt-3">
-                    <a href="https://www.facebook.com/Diabetesfighters123" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/sugarxejust" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-12 mb-4">
-                 <h5 data-lang-key="location">موقعنا</h5>
-                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3418.423992542525!2d29.5585353151298!3d30.86339998158747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145f5d3d9d7a7a7b%3A0x0!2zMzDCsDUxJzQ4LjIiTiAyOcKwMzMnMzEuMSJF!5e0!3m2!1sen!2seg!4v1678886400000!5m2!1sen!2seg" width="100%" height="200" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Google Map"></iframe>
-            </div>
-        </div>
-        <div class="text-center mt-3">
+        <div class="container text-center">
             <p>&copy; 2025 Sugar-X. <span data-lang-key="rights">كل الحقوق محفوظة.</span></p>
         </div>
-    </div>
     </footer>
 
-    <!-- Bootstrap JS and Dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
     const translations = {
         en: {
-            // Navbar
-            home: "Home",
-            education: "To learn",
-            about: "About Us",
-            gallery: "Gallery",
-            podcast: "Podcast",
-            language: "Language",
-
-            // General
-            viewGallery: "View Gallery",
-
-            // Footer
-            aboutFooter: "At Sugar X, we believe awareness is the first step to calmer, healthier living. We’re here to help you understand diabetes, steady your numbers, and live with confidence.",
-            contactTitle: "Contact Us",
-            address: "<strong>Address:</strong> Third District, Had Sukkra & Abu Hamad, New Borg El Arab, Alexandria.",
-            email: "<strong>Email:</strong>",
-            location: "Our Location",
-            rights: "All rights reserved.",
-
-            // Gallery Page
-            eventsTitle: "Events",
-            event3Title: "Sugar X 2024",
-            event3Desc: "By the grace of God, we concluded the activities of Sugar X 2024, the awareness campaign aimed at spreading awareness about diabetes.",
-            
-            // NEW NURSERY CONTENT
+            home: "Home", education: "Learn", about: "About", gallery: "Gallery", podcast: "Podcast", language: "Language",
+            eventsTitle: "Events Gallery", viewAlbum: "View Album", rights: "All rights reserved.",
             nurseryTitle: "Pharos Kidzone Day",
-            nurseryDesc: "A fun-filled day at Pharos Kidzone! We educated little hearts about diabetes through games, smiles, and interactive learning."
+            nurseryDesc: "A fun-filled day at Pharos Kidzone! Educating little hearts about diabetes with games and smiles.",
+            campusTitle: "Sugar X Main Campus 2025",
+            campusDesc: "The grand awareness tour inside the Main Campus. Youthful energy and spreading awareness among students.",
+            event3Title: "Sugar X 2024",
+            event3Desc: "Successfully concluded Sugar X 2024 activities, aiming to spread diabetes awareness."
         },
         ar: {
-            // Navbar
-            home: "الرئيسية",
-            education: "تَعْلَمْ",
-            about: "من نحن",
-            gallery: "المعرض",
-            podcast: "بودكاست",
-            language: "اللغة",
-
-            // General
-            viewGallery: "شاهد الصور",
-
-            // Footer
-            aboutFooter: "في سكر X نؤمن أن الوعي هو أول خطوة لحياة أهدأ وأصح. حملتنا وُجدت لتساندك: تفهم السكري، تضبط سكرّك، وتعيش بثقة.",
-            contactTitle: "تواصل معنا",
-            address: "<strong>العنوان:</strong> الحي الثالث، حد سُكْرة وأبو حمد، برج العرب الجديدة، الإسكندرية.",
-            email: "<strong>البريد الإلكتروني:</strong>",
-            location: "موقعنا",
-            rights: "كل الحقوق محفوظة.",
-            
-            // Gallery Page
-            eventsTitle: "الفعاليات",
-            event3Title: "سكر X 2024",
-            event3Desc: "بحمد الله خلصنا فعاليات سكر X 2024، حملة التوعية اللي كان هدفها نشر الوعي حول مرض السكري.",
-
-            // NEW NURSERY CONTENT
+            home: "الرئيسية", education: "تَعْلَمْ", about: "من نحن", gallery: "المعرض", podcast: "بودكاست", language: "اللغة",
+            eventsTitle: "معرض الفعاليات", viewAlbum: "شاهد الألبوم", rights: "كل الحقوق محفوظة.",
             nurseryTitle: "يوم في Pharos Kidzone",
-            nurseryDesc: "يوم ممتع في Pharos Kidzone! بنعلم قلوب صغيرة عن السكري من خلال الألعاب والابتسامات."
+            nurseryDesc: "يوم ممتع في Pharos Kidzone! بنعلم قلوب صغيرة عن السكري من خلال الألعاب والابتسامات.",
+            campusTitle: "سكر X في الحرم الجامعي 2025",
+            campusDesc: "جولة التوعية الكبرى داخل الحرم الجامعي. طاقة شبابية ونشر للوعي بين الطلاب.",
+            event3Title: "سكر X 2024",
+            event3Desc: "بحمد الله خلصنا فعاليات سكر X 2024، حملة التوعية اللي كان هدفها نشر الوعي حول مرض السكري."
         }
     };
 
@@ -312,25 +179,16 @@
         localStorage.setItem('language', lang);
         document.documentElement.lang = lang;
         document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-        
-        document.querySelectorAll('[data-lang-key]').forEach(element => {
-            const key = element.getAttribute('data-lang-key');
-            if (translations[lang] && translations[lang][key]) {
-                element.innerHTML = translations[lang][key];
-            }
+        document.querySelectorAll('[data-lang-key]').forEach(el => {
+            const key = el.getAttribute('data-lang-key');
+            if (translations[lang][key]) el.innerHTML = translations[lang][key];
         });
-        
-        // Ensure Arabic is correct in dropdown
-        const langDropdown = document.querySelector('#languageDropdown + .dropdown-menu');
-        if (langDropdown) {
-            const arabicOption = langDropdown.querySelector('a[onclick="setLanguage(\'ar\')"]');
-            if (arabicOption) arabicOption.textContent = 'العربية';
-        }
+        const arabicOption = document.querySelector('a[onclick="setLanguage(\'ar\')"]');
+        if (arabicOption) arabicOption.textContent = 'العربية';
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-        const savedLang = localStorage.getItem('language') || 'ar';
-        setLanguage(savedLang);
+        setLanguage(localStorage.getItem('language') || 'ar');
     });
     </script>
 </body>
